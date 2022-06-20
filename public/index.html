@@ -10,8 +10,8 @@
 </head>
 
 <body class="bg-stone-100">
-    <div class="container px-6">
-        <header class="flex justify-between items-center mt-12">
+    <div class="container m-auto px-6">
+        <header class="flex justify-between items-center mt-12 md:hidden">
             <div>
                 <a href="#"><img src="/assets/images/logo-digitizer.svg" alt="دیجی تایزر" /></a>
             </div>
@@ -26,7 +26,7 @@
             </div>
         </header>
         <main>
-            <div class="flex justify-between items-center gap-3 mt-6">
+            <div class="flex justify-between items-center gap-3 mt-6 mb-12">
                 <div class="flex flex-1 justify-start items-center p-3 bg-white rounded text-orange-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
@@ -45,10 +45,170 @@
                 </div>
             </div>
 
-            <div id="products">
-                <article class="flex flex-col rounded-xl shadow-md bg-white mt-12 overflow-hidden p-6px">
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-4">
+                <article class="flex flex-col rounded-xl shadow-md bg-white overflow-hidden p-6px">
                     <div class="flex justify-center items-center bg-stone-200 relative rounded-xl py-4 mb-5">
-                        <img class="" src="/assets/images/static/apple_6_series.png" alt="ساعت هوشمند اپل سری">
+                        <img src="/assets/images/static/apple_6_series.png" alt="ساعت هوشمند اپل سری">
+                        <span
+                            class="absolute top-3 right-3 text-orange-400 bg-gray-300 h-7 w-7 rounded-full flex justify-center items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="flex flex-col px-1">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-slate-200 text-xs">اپل</span>
+                            <div class="flex">
+                                <span class="w-3 h-3 bg-orange-300 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-indigo-600 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-yellow-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-orange-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-stone-50 rounded-full ring-1 ring-gray-300"></span>
+                            </div>
+                        </div>
+                        <h2 class="font-bold text-slate-900 mb-2">ساعت هوشمند اپل سری ۶</h2>
+                        <div class="text-left text-orange-700"><span class="text-lg font-medium">۴۸,۲۵۰,۰۰۰</span>
+                            <span>تومان</span>
+                        </div>
+                        <span class="border-t border-gray-200 my-2.5 block"></span>
+                        <a href="#" class="text-center text-lg text-orange-400 font-bold mb-2">مشاهده و سفارش</a>
+                    </div>
+                </article>
+                <article class="flex flex-col rounded-xl shadow-md bg-white overflow-hidden p-6px">
+                    <div class="flex justify-center items-center bg-stone-200 relative rounded-xl py-4 mb-5">
+                        <img src="/assets/images/static/apple_3_series.png" alt="ساعت هوشمند اپل سری">
+                        <span
+                            class="absolute top-3 right-3 text-orange-400 bg-gray-300 h-7 w-7 rounded-full flex justify-center items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="flex flex-col px-1">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-slate-200 text-xs">اپل</span>
+                            <div class="flex">
+                                <span class="w-3 h-3 bg-orange-300 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-indigo-600 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-yellow-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-orange-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-stone-50 rounded-full ring-1 ring-gray-300"></span>
+                            </div>
+                        </div>
+                        <h2 class="font-bold text-slate-900 mb-2">ساعت هوشمند اپل سری ۶</h2>
+                        <div class="text-left text-orange-700"><span class="text-lg font-bold">۴۸,۲۵۰,۰۰۰</span>
+                            <span>تومان</span>
+                        </div>
+                        <span class="border-t border-gray-200 my-2.5 block"></span>
+                        <a href="#" class="text-center text-lg text-orange-400 font-bold mb-2">مشاهده و سفارش</a>
+                    </div>
+                </article>
+                <article class="flex flex-col rounded-xl shadow-md bg-white overflow-hidden p-6px">
+                    <div class="flex justify-center items-center bg-stone-200 relative rounded-xl py-4 mb-5">
+                        <img src="/assets/images/static/apple_6_series.png" alt="ساعت هوشمند اپل سری">
+                        <span
+                            class="absolute top-3 right-3 text-orange-400 bg-gray-300 h-7 w-7 rounded-full flex justify-center items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="flex flex-col px-1">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-slate-200 text-xs">اپل</span>
+                            <div class="flex">
+                                <span class="w-3 h-3 bg-orange-300 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-indigo-600 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-yellow-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-orange-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-stone-50 rounded-full ring-1 ring-gray-300"></span>
+                            </div>
+                        </div>
+                        <h2 class="font-bold text-slate-900 mb-2">ساعت هوشمند اپل سری ۶</h2>
+                        <div class="text-left text-orange-700"><span class="text-lg font-bold">۴۸,۲۵۰,۰۰۰</span>
+                            <span>تومان</span>
+                        </div>
+                        <span class="border-t border-gray-200 my-2.5 block"></span>
+                        <a href="#" class="text-center text-lg text-orange-400 font-bold mb-2">مشاهده و سفارش</a>
+                    </div>
+                </article>
+                <article class="flex flex-col rounded-xl shadow-md bg-white overflow-hidden p-6px">
+                    <div class="flex justify-center items-center bg-stone-200 relative rounded-xl py-4 mb-5">
+                        <img src="/assets/images/static/apple_3_series.png" alt="ساعت هوشمند اپل سری">
+                        <span
+                            class="absolute top-3 right-3 text-orange-400 bg-gray-300 h-7 w-7 rounded-full flex justify-center items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="flex flex-col px-1">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-slate-200 text-xs">اپل</span>
+                            <div class="flex">
+                                <span class="w-3 h-3 bg-orange-300 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-indigo-600 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-yellow-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-orange-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-stone-50 rounded-full ring-1 ring-gray-300"></span>
+                            </div>
+                        </div>
+                        <h2 class="font-bold text-slate-900 mb-2">ساعت هوشمند اپل سری ۶</h2>
+                        <div class="text-left text-orange-700"><span class="text-lg font-bold">۴۸,۲۵۰,۰۰۰</span>
+                            <span>تومان</span>
+                        </div>
+                        <span class="border-t border-gray-200 my-2.5 block"></span>
+                        <a href="#" class="text-center text-lg text-orange-400 font-bold mb-2">مشاهده و سفارش</a>
+                    </div>
+                </article>
+                <article class="flex flex-col rounded-xl shadow-md bg-white overflow-hidden p-6px">
+                    <div class="flex justify-center items-center bg-stone-200 relative rounded-xl py-4 mb-5">
+                        <img src="/assets/images/static/apple_6_series.png" alt="ساعت هوشمند اپل سری">
+                        <span
+                            class="absolute top-3 right-3 text-orange-400 bg-gray-300 h-7 w-7 rounded-full flex justify-center items-center cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="flex flex-col px-1">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="text-slate-200 text-xs">اپل</span>
+                            <div class="flex">
+                                <span class="w-3 h-3 bg-orange-300 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-indigo-600 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-yellow-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-orange-400 rounded-full ring-1 ring-white"></span>
+                                <span class="w-3 h-3 bg-stone-50 rounded-full ring-1 ring-gray-300"></span>
+                            </div>
+                        </div>
+                        <h2 class="font-bold text-slate-900 mb-2">ساعت هوشمند اپل سری ۶</h2>
+                        <div class="text-left text-orange-700"><span class="text-lg font-bold">۴۸,۲۵۰,۰۰۰</span>
+                            <span>تومان</span>
+                        </div>
+                        <span class="border-t border-gray-200 my-2.5 block"></span>
+                        <a href="#" class="text-center text-lg text-orange-400 font-bold mb-2">مشاهده و سفارش</a>
+                    </div>
+                </article>
+                <article class="flex flex-col rounded-xl shadow-md bg-white overflow-hidden p-6px">
+                    <div class="flex justify-center items-center bg-stone-200 relative rounded-xl py-4 mb-5">
+                        <img src="/assets/images/static/apple_3_series.png" alt="ساعت هوشمند اپل سری">
                         <span
                             class="absolute top-3 right-3 text-orange-400 bg-gray-300 h-7 w-7 rounded-full flex justify-center items-center cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
