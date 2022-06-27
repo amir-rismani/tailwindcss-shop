@@ -2,6 +2,11 @@ module.exports = {
   content: ["./public/**/*.{html,js}"],
   theme: {
     extend: {
+      screens: {
+        xs: "320px",
+        // => @media (min-width: 320px) { ... }
+      },
+
       fontFamily: {
         sans: ["Vazirmatn"],
       },
