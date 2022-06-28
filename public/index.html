@@ -26,7 +26,7 @@
             </div>
         </header>
         <main>
-            <div class="flex justify-between items-center gap-3 mt-6 mb-12">
+            <div class="flex justify-between items-center gap-3 mt-6 mb-12 md:hidden">
                 <div class="flex flex-1 justify-start items-center p-3 bg-white rounded text-orange-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
@@ -45,10 +45,27 @@
                 </div>
             </div>
 
-            <div class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5">
+            <div class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5 mt-5">
                 <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">sidebar</div>
-                <div class="col-span-8 lg:col-span-9 p-4 bg-white rounded hidden md:block">filter bar</div>
-                <div class="col-span-12 md:col-span-8 lg:col-span-9">
+                <div class="col-span-8 lg:col-span-9 bg-white rounded hidden md:block self-center">
+                    <div class="flex gap-x-7">
+                        <span class="flex justify-center items-center p-1 text-orange-400 bg-orange-100 rounded">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
+                            </svg>
+                        </span>
+                        <button class="font-bold text-slate-80 text-slate-800 py-4">محبوب‌ترین</button>
+                        <button
+                            class="text-gray-300 focus:font-bold focus:text-slate-800 hover:text-slate-800 py-4">بربازدیدترین</button>
+                        <button
+                            class="text-gray-300 focus:font-bold focus:text-slate-800 hover:text-slate-800 py-4">گران‌ترین</button>
+                        <button
+                            class="text-gray-300 focus:font-bold focus:text-slate-800 hover:text-slate-800 py-4">ارزان‌ترین</button>
+                    </div>
+                </div>
+                <div class="col-span-12 md:col-span-8 lg:col-span-9 md:mt-12">
                     <div x-data="{ products: [
                         {id:1, name: 'ساعت هوشمند اپل سری ۶', image: '/assets/images/static/apple_6_series.png', colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۴۸,۲۵۰,۰۰۰', brand: 'اپل'},
                         {id:2, name: 'ساعت هوشمند اپل سری ۳', image: '/assets/images/static/apple_3_series.png', colors: ['bg-blue-600', 'bg-green-600', 'bg-black', 'bg-orange-400'], price: '۴۸,۲۵۰,۰۰۰', brand: 'اپل'},
