@@ -48,21 +48,35 @@
             <div class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5 mt-5">
                 <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">sidebar</div>
                 <div class="col-span-8 lg:col-span-9 bg-white rounded hidden md:block self-center">
-                    <div class="flex gap-x-7">
-                        <span class="flex justify-center items-center p-1 text-orange-400 bg-orange-100 rounded">
+                    <div class="flex justify-start items-center gap-x-7 px-2 text-gray-300 caret-transparent"
+                        x-data="{ active: 1, activeClasses: 'text-slate-800 font-bold'}">
+                        <div class="flex justify-center items-center w-8 h-8 text-orange-400 bg-orange-100 rounded">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
                             </svg>
-                        </span>
-                        <button class="font-bold text-slate-80 text-slate-800 py-4">محبوب‌ترین</button>
-                        <button
-                            class="text-gray-300 focus:font-bold focus:text-slate-800 hover:text-slate-800 py-4">بربازدیدترین</button>
-                        <button
-                            class="text-gray-300 focus:font-bold focus:text-slate-800 hover:text-slate-800 py-4">گران‌ترین</button>
-                        <button
-                            class="text-gray-300 focus:font-bold focus:text-slate-800 hover:text-slate-800 py-4">ارزان‌ترین</button>
+                        </div>
+                        <button @click="active=1" class="py-4 relative" :class="active === 1 ? activeClasses : ''">
+                            <span>محبوب‌ترین</span>
+                            <span x-show="active===1"
+                                class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
+                        </button>
+                        <button @click="active=2" class="py-4 relative" :class="active === 2 ? activeClasses : ''">
+                            <span>بربازدیدترین</span>
+                            <span x-show="active===2"
+                                class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
+                        </button>
+                        <button @click="active=3" class="py-4 relative" :class="active === 3 ? activeClasses : ''">
+                            <span>گران‌ترین</span>
+                            <span x-show="active===3"
+                                class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
+                        </button>
+                        <button @click="active=4" class="py-4 relative" :class="active === 4 ? activeClasses : ''">
+                            <span>ارزان‌ترین</span>
+                            <span x-show="active===4"
+                                class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
+                        </button>
                     </div>
                 </div>
                 <div class="col-span-12 md:col-span-8 lg:col-span-9 md:mt-12">
