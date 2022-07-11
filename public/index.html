@@ -46,76 +46,272 @@
             </div>
 
             <div class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5 mt-7">
-                <div
-                    class="col-span-4 lg:col-span-3 row-span-2 hidden md:block bg-white rounded-xl p-6 divide-y divide-stone-100">
-                    <div class="flex flex-col">
-                        <h3 class="text-xl font-bold text-orange-400 mb-7">دسته بندی</h3>
-                        <div class="flex text-slate-800 mb-5">
-                            <span class="relative ml-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                                </svg>
-                                <span
-                                    class="bg-gray-300 w-5 h-5 block opacity-30 rounded-full absolute -top-2 -right-1"></span>
-                            </span>
-                            <span class="text-xl">تلفن همراه</span>
-                        </div>
-                        <div class="flex text-gray-300 mb-5">
-                            <span class="relative ml-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
-                                <span
-                                    class="bg-gray-300 w-5 h-5 block opacity-30 rounded-full absolute -top-2 -right-1"></span>
-                            </span>
-                            <span class="text-xl">لپ تاپ</span>
-                        </div>
-                        <div class="flex text-gray-300 opacity-80 mb-5">
-                            <span class="relative ml-2">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
-                                <span
-                                    class="bg-gray-300 w-5 h-5 block opacity-30 rounded-full absolute -top-2 -right-1"></span>
-                            </span>
-                            <span class="text-xl">ساعت هوشمند</span>
-                        </div>
-                    </div>
-                    <div class="flex flex-col">
-                        <h3 class="text-xl font-bold text-orange-400 mb-7 mt-4">فیلتر</h3>
-                        <div class="flex justify-between text-slate-800 mb-5">
-                            <div class="flex">
-                                <span class="relative ml-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                            d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                                    </svg>
+                <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">
+                    <div class="bg-white rounded-xl p-6 divide-y divide-stone-100">
+                        <div class="flex flex-col mb-5">
+                            <h3 class="text-xl font-bold text-orange-400 mb-7">دسته بندی</h3>
+                            <ul>
+                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50">
                                     <span
-                                        class="bg-gray-300 w-5 h-5 block opacity-30 rounded-full absolute -top-2 -right-1"></span>
-                                </span>
-                                <span class="text-xl">برند محصول</span>
-                            </div>
-                            <span>
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
-                                    fill="currentColor">
-                                    <path fill-rule="evenodd"
-                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                            </span>
+                                        class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+                                        <svg class="w-4 h-5 absolute -left-1 top-2" fill="none" stroke="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                                                stroke-width="1.13" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                                                stroke-width="1.13" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="text-xl">تلفن همراه</span>
+                                </li>
+                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50">
+                                    <span
+                                        class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+
+                                        <svg class="w-4 h-5 absolute -left-1 top-2" fill="none" stroke="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M4.3 1.33h7.4c2.37 0 2.97.6 2.97 2.96v4.22c0 2.38-.6 2.96-2.96 2.96H4.29c-2.36.01-2.96-.58-2.96-2.95V4.29c0-2.36.6-2.96 2.96-2.96ZM8 11.48v3.19M1.33 8.67h13.34M5 14.67h6"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="text-xl">لپ تاپ</span>
+
+                                </li>
+                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50">
+                                    <span
+                                        class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+                                        <svg class="w-4 h-5 absolute -left-1 top-2" fill="none" stroke="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M5.67 12.67h4.66c1.56 0 2.34-.78 2.34-2.34V5.67c0-1.56-.78-2.34-2.34-2.34H5.67c-1.56 0-2.34.78-2.34 2.34v4.66c0 1.56.78 2.34 2.34 2.34ZM10.67 1.33H5.33M10.67 14.67H5.33"
+                                                stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M7.67 6.33v2h2" stroke-miterlimit="10" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <span class="text-xl">ساعت هوشمند</span>
+
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-col" x-data="{tab: 1}">
+                            <h3 class="text-xl font-bold text-orange-400 mb-7 mt-4">فیلتر</h3>
+                            <ul>
+                                <li class="mb-7">
+                                    <div @click="tab = tab == 1 ? 0 : 1"
+                                        class="flex justify-between items-center text-slate-800 cursor-pointer caret-transparent hover:bg-gray-50 py-3 px-2">
+                                        <div class="flex">
+                                            <span
+                                                class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+                                                <svg class="w-4 h-5 absolute -left-1 top-2" fill="none"
+                                                    stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M12.83 13.27H1.17a.44.44 0 0 1-.44-.44c0-.24.2-.43.44-.43h11.66c.24 0 .44.2.44.43 0 .24-.2.44-.44.44Z" />
+                                                    <path
+                                                        d="M2.16 12.83h-.88l.03-7.01c0-.5.23-.96.62-1.26l4.08-3.18a1.61 1.61 0 0 1 1.98 0l4.08 3.17c.38.3.62.78.62 1.27v7.01h-.88v-7c0-.23-.1-.45-.28-.59L7.45 2.07a.74.74 0 0 0-.9 0L2.47 5.25a.73.73 0 0 0-.28.57l-.03 7.01Z" />
+                                                    <path
+                                                        d="M9.92 13.27H4.08a.44.44 0 0 1-.43-.44V7.3c0-.72.58-1.31 1.3-1.31h4.1c.71 0 1.3.59 1.3 1.31v5.54c0 .24-.2.44-.43.44Zm-5.4-.87h4.96V7.3c0-.25-.2-.45-.44-.45H4.96c-.24 0-.44.2-.44.44v5.1Z" />
+                                                    <path
+                                                        d="M5.83 10.8a.44.44 0 0 1-.43-.45v-.87c0-.24.2-.44.43-.44.24 0 .44.2.44.44v.87c0 .24-.2.44-.44.44ZM7.88 4.81H6.13a.44.44 0 0 1-.44-.43c0-.24.2-.44.43-.44h1.75c.24 0 .44.2.44.44 0 .23-.2.43-.44.43Z" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-xl">برند محصول</span>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" :class="tab==1 ? 'rotate-180' : ''"
+                                                class="h-5 w-5 transition-all" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div x-show="tab==1">
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>اپل</span>
+                                            </label>
+                                        </div>
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>سامسونگ</span>
+                                            </label>
+                                        </div>
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>شیائومی</span>
+                                            </label>
+                                        </div>
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>هواوی</span>
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <!-- <li class="mb-7">
+                                    <div @click="tab = tab == 2 ? 0 : 2"
+                                        class="flex justify-between items-center text-slate-800 mb-5 cursor-pointer caret-transparent">
+                                        <div class="flex">
+                                            <span
+                                                class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+                                                <svg class="w-4 h-5 absolute -left-1 top-2" fill="none"
+                                                    stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5.83 2.62v7.88c0 .63-.25 1.2-.66 1.63l-.02.02-.17.15c-.17.15-.37.26-.58.35l-.19.07a2.27 2.27 0 0 1-1.18.07l-.22-.06-.27-.1s0 0 0 0a2.95 2.95 0 0 1-.47-.29h-.01a1.6 1.6 0 0 1-.21-.19l-.2-.22c-.1-.14-.2-.3-.28-.46 0 0 0 0 0 0v-.02l-.1-.26-.06-.22c-.03-.16-.04-.31-.04-.47V2.62c0-.87.58-1.45 1.46-1.45h1.75c.87 0 1.45.58 1.45 1.45Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M12.83 9.62v1.75c0 .88-.58 1.46-1.46 1.46H3.5c.24 0 .48-.03.71-.1l.2-.08a2.04 2.04 0 0 0 .73-.5l.03-.02 3.96-3.96h2.24c.88 0 1.46.58 1.46 1.45ZM2.8 12.73c-.34-.1-.68-.3-.95-.58a2.34 2.34 0 0 0 .96.58Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10.72 6.59 9.13 8.17l-3.96 3.96c.4-.42.66-1 .66-1.63V4.86l1.58-1.58c.62-.61 1.45-.61 2.07 0l1.24 1.24c.61.62.61 1.45 0 2.07ZM3.5 11.08a.58.58 0 1 0 0-1.16.58.58 0 0 0 0 1.16Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-xl">رنگ محصول</span>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" :class="tab==2 ? 'rotate-180' : ''"
+                                                class="h-5 w-5 transition-all" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div x-show="tab==2">
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="red-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="red-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="green-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-green-600 bg-gray-100 rounded border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="green-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Green</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="purple-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-purple-600 bg-gray-100 rounded border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="purple-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Purple</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="teal-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-teal-600 bg-gray-100 rounded border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="teal-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Teal</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="yellow-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-yellow-400 bg-gray-100 rounded border-gray-300 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="yellow-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yellow</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="orange-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-orange-500 bg-gray-100 rounded border-gray-300 focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="orange-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Orange</label>
+                                        </div>
+
+                                    </div>
+                                </li>
+                                <li class="mb-7">
+                                    <div @click="tab = tab == 3 ? 0 : 3"
+                                        class="flex justify-between items-center text-slate-800 mb-5 cursor-pointer caret-transparent">
+                                        <div class="flex">
+                                            <span
+                                                class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+                                                <svg class="w-4 h-5 absolute -left-1 top-2" fill="none"
+                                                    stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10.52 7.9c-.24.24-.38.59-.35.95.06.63.63 1.1 1.26 1.1h1.11v.69c0 1.2-.98 2.2-2.2 2.2H3.66a2.2 2.2 0 0 1-2.2-2.2V6.71c0-1.2 1-2.19 2.2-2.19h6.7c1.2 0 2.2.99 2.2 2.2v.83h-1.19c-.32 0-.62.13-.84.35Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M1.46 7.24V4.57c0-.7.42-1.31 1.07-1.55l4.63-1.75a1.1 1.1 0 0 1 1.5 1.03v2.22M13.16 8.15v1.2a.6.6 0 0 1-.58.6h-1.15c-.63 0-1.2-.46-1.26-1.1-.03-.36.1-.7.35-.95.22-.22.52-.35.84-.35h1.22a.6.6 0 0 1 .58.6ZM4.08 7h4.09"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-xl">محدوده قیمت</span>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" :class="tab==3 ? 'rotate-180' : ''"
+                                                class="h-5 w-5 transition-all" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div x-show="tab==3">
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="red-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="red-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Red</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="green-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-green-600 bg-gray-100 rounded border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="green-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Green</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="purple-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-purple-600 bg-gray-100 rounded border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="purple-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Purple</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="teal-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-teal-600 bg-gray-100 rounded border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="teal-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Teal</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="yellow-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-yellow-400 bg-gray-100 rounded border-gray-300 focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="yellow-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Yellow</label>
+                                        </div>
+                                        <div class="flex items-center mr-4">
+                                            <input checked="" id="orange-checkbox" type="checkbox" value=""
+                                                class="w-4 h-4 text-orange-500 bg-gray-100 rounded border-gray-300 focus:ring-orange-500 dark:focus:ring-orange-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                            <label for="orange-checkbox"
+                                                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Orange</label>
+                                        </div>
+                                    </div>
+                                </li> -->
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div class="col-span-8 lg:col-span-9 bg-white rounded hidden md:block self-center">
                     <div class="flex justify-start items-center gap-x-7 px-2 text-gray-300 caret-transparent"
-                        x-data="{ active: 1, activeClasses: 'text-slate-800 font-bold'}">
+                        x-data="{ tab: 1, tabClasses: 'text-slate-800 font-bold'}">
                         <div class="flex justify-center items-center w-8 h-8 text-orange-400 bg-orange-100 rounded">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor" stroke-width="2">
@@ -123,24 +319,24 @@
                                     d="M3 4h13M3 8h9m-9 4h9m5-4v12m0 0l-4-4m4 4l4-4" />
                             </svg>
                         </div>
-                        <button @click="active=1" class="py-4 relative" :class="active === 1 ? activeClasses : ''">
+                        <button @click="tab=1" class="py-4 relative" :class="tab === 1 ? tabClasses : ''">
                             <span>محبوب‌ترین</span>
-                            <span x-show="active===1"
+                            <span x-show="tab===1"
                                 class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
                         </button>
-                        <button @click="active=2" class="py-4 relative" :class="active === 2 ? activeClasses : ''">
+                        <button @click="tab=2" class="py-4 relative" :class="tab === 2 ? tabClasses : ''">
                             <span>بربازدیدترین</span>
-                            <span x-show="active===2"
+                            <span x-show="tab===2"
                                 class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
                         </button>
-                        <button @click="active=3" class="py-4 relative" :class="active === 3 ? activeClasses : ''">
+                        <button @click="tab=3" class="py-4 relative" :class="tab === 3 ? tabClasses : ''">
                             <span>گران‌ترین</span>
-                            <span x-show="active===3"
+                            <span x-show="tab===3"
                                 class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
                         </button>
-                        <button @click="active=4" class="py-4 relative" :class="active === 4 ? activeClasses : ''">
+                        <button @click="tab=4" class="py-4 relative" :class="tab === 4 ? tabClasses : ''">
                             <span>ارزان‌ترین</span>
-                            <span x-show="active===4"
+                            <span x-show="tab===4"
                                 class="w-1 h-1 bg-orange-400 rounded-full absolute top-4 -left-1"></span>
                         </button>
                     </div>
