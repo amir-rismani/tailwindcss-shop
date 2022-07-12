@@ -51,7 +51,7 @@
                         <div class="flex flex-col mb-5">
                             <h3 class="text-xl font-bold text-orange-400 mb-7">دسته بندی</h3>
                             <ul>
-                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50">
+                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2">
                                     <span
                                         class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
                                         <svg class="w-4 h-5 absolute -left-1 top-2" fill="none" stroke="currentColor"
@@ -65,7 +65,7 @@
                                     </span>
                                     <span class="text-xl">تلفن همراه</span>
                                 </li>
-                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50">
+                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2">
                                     <span
                                         class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
 
@@ -79,7 +79,7 @@
                                     <span class="text-xl">لپ تاپ</span>
 
                                 </li>
-                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50">
+                                <li class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2">
                                     <span
                                         class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
                                         <svg class="w-4 h-5 absolute -left-1 top-2" fill="none" stroke="currentColor"
@@ -96,11 +96,11 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="flex flex-col" x-data="{tab: 1}">
+                        <div class="flex flex-col">
                             <h3 class="text-xl font-bold text-orange-400 mb-7 mt-4">فیلتر</h3>
                             <ul>
-                                <li class="mb-7">
-                                    <div @click="tab = tab == 1 ? 0 : 1"
+                                <li class="mb-7" x-data="{open: true}">
+                                    <div @click="open = !open"
                                         class="flex justify-between items-center text-slate-800 cursor-pointer caret-transparent hover:bg-gray-50 py-3 px-2">
                                         <div class="flex">
                                             <span
@@ -120,7 +120,7 @@
                                             <span class="text-xl">برند محصول</span>
                                         </div>
                                         <span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" :class="tab==1 ? 'rotate-180' : ''"
+                                            <svg xmlns="http://www.w3.org/2000/svg" :class="open ? 'rotate-180' : ''"
                                                 class="h-5 w-5 transition-all" viewBox="0 0 20 20" fill="currentColor">
                                                 <path fill-rule="evenodd"
                                                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -128,7 +128,7 @@
                                             </svg>
                                         </span>
                                     </div>
-                                    <div x-show="tab==1">
+                                    <div x-show="open">
                                         <div class="py-1.5 mr-4 text-lg">
                                             <label
                                                 class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
@@ -161,9 +161,117 @@
                                                 <span>هواوی</span>
                                             </label>
                                         </div>
-
                                     </div>
                                 </li>
+                                <li class="mb-7" x-data="{open: true}">
+                                    <div @click="open = !open"
+                                        class="flex justify-between items-center text-slate-800 cursor-pointer caret-transparent hover:bg-gray-50 py-3 px-2">
+                                        <div class="flex">
+                                            <span
+                                                class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+                                                <svg class="w-4 h-5 absolute -left-1 top-2" fill="none"
+                                                    stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M5.83 2.62v7.88c0 .63-.25 1.2-.66 1.63l-.02.02-.17.15c-.17.15-.37.26-.58.35l-.19.07a2.27 2.27 0 0 1-1.18.07l-.22-.06-.27-.1s0 0 0 0a2.95 2.95 0 0 1-.47-.29h-.01a1.6 1.6 0 0 1-.21-.19l-.2-.22c-.1-.14-.2-.3-.28-.46 0 0 0 0 0 0v-.02l-.1-.26-.06-.22c-.03-.16-.04-.31-.04-.47V2.62c0-.87.58-1.45 1.46-1.45h1.75c.87 0 1.45.58 1.45 1.45Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M12.83 9.62v1.75c0 .88-.58 1.46-1.46 1.46H3.5c.24 0 .48-.03.71-.1l.2-.08a2.04 2.04 0 0 0 .73-.5l.03-.02 3.96-3.96h2.24c.88 0 1.46.58 1.46 1.45ZM2.8 12.73c-.34-.1-.68-.3-.95-.58a2.34 2.34 0 0 0 .96.58Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10.72 6.59 9.13 8.17l-3.96 3.96c.4-.42.66-1 .66-1.63V4.86l1.58-1.58c.62-.61 1.45-.61 2.07 0l1.24 1.24c.61.62.61 1.45 0 2.07ZM3.5 11.08a.58.58 0 1 0 0-1.16.58.58 0 0 0 0 1.16Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-xl">رنگ محصول</span>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" :class="open ? 'rotate-180' : ''"
+                                                class="h-5 w-5 transition-all" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div x-show="open">
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>سفید</span>
+                                            </label>
+                                        </div>
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>مشکی</span>
+                                            </label>
+                                        </div>
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>آبی</span>
+                                            </label>
+                                        </div>
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>بنفش</span>
+                                            </label>
+                                        </div>
+                                        <div class="py-1.5 mr-4 text-lg">
+                                            <label
+                                                class="ml-2 text-sm font-medium text-slate-800 flex items-center caret-transparent cursor-pointer">
+                                                <input type="checkbox" value=""
+                                                    class="w-4 h-4 ml-2.5 text-orange-500 bg-white border-slate-800 rounded ring-0 focus:ring-0 focus:outline-none focus:ring-offset-0  checked:border-orange-400 checked:bg-orange-300 enabled:hover:border-orange-400 enabled:hover:bg-orange-300 cursor-pointer">
+                                                <span>قهوه‌ای</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mb-7" x-data="{open: true}">
+                                    <div @click="open = !open"
+                                        class="flex justify-between items-center text-slate-800 cursor-pointer caret-transparent hover:bg-gray-50 py-3 px-2">
+                                        <div class="flex">
+                                            <span
+                                                class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5">
+                                                <svg class="w-4 h-5 absolute -left-1 top-2" fill="none"
+                                                    stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                    <path
+                                                        d="M10.52 7.9c-.24.24-.38.59-.35.95.06.63.63 1.1 1.26 1.1h1.11v.69c0 1.2-.98 2.2-2.2 2.2H3.66a2.2 2.2 0 0 1-2.2-2.2V6.71c0-1.2 1-2.19 2.2-2.19h6.7c1.2 0 2.2.99 2.2 2.2v.83h-1.19c-.32 0-.62.13-.84.35Z"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M1.46 7.24V4.57c0-.7.42-1.31 1.07-1.55l4.63-1.75a1.1 1.1 0 0 1 1.5 1.03v2.22M13.16 8.15v1.2a.6.6 0 0 1-.58.6h-1.15c-.63 0-1.2-.46-1.26-1.1-.03-.36.1-.7.35-.95.22-.22.52-.35.84-.35h1.22a.6.6 0 0 1 .58.6ZM4.08 7h4.09"
+                                                        stroke-width=".88" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </span>
+                                            <span class="text-xl">محدوده قیمت</span>
+                                        </div>
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" :class="open ? 'rotate-180' : ''"
+                                                class="h-5 w-5 transition-all" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <div x-show="open">
+                                    </div>
+                                </li>
+
                                 <!-- <li class="mb-7">
                                     <div @click="tab = tab == 2 ? 0 : 2"
                                         class="flex justify-between items-center text-slate-800 mb-5 cursor-pointer caret-transparent">
