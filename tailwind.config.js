@@ -10,8 +10,13 @@ module.exports = {
       fontFamily: {
         sans: ["Vazirmatn"],
       },
+
       spacing: {
         "6px": "6px",
+      },
+
+      boxShadow: {
+        header: "0 4px 14px 0px rgba(0, 0, 0, 0.8)",
       },
     },
   },
