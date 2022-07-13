@@ -599,20 +599,54 @@ select{
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.container{
+  width: 100%;
+}
+@media (min-width: 320px){
+  .container{
+    max-width: 320px;
+  }
+}
+@media (min-width: 640px){
+  .container{
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px){
+  .container{
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px){
+  .container{
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px){
+  .container{
+    max-width: 1536px;
+  }
+}
 .absolute{
   position: absolute;
 }
 .relative{
   position: relative;
 }
-.top-1{
-  top: 0.25rem;
-}
-.right-4{
-  right: 1rem;
+.sticky{
+  position: -webkit-sticky;
+  position: sticky;
 }
 .top-0{
   top: 0px;
+}
+.right-4{
+  right: 1rem;
 }
 .right-1{
   right: 0.25rem;
@@ -632,6 +666,9 @@ select{
 .right-3{
   right: 0.75rem;
 }
+.z-50{
+  z-index: 50;
+}
 .col-span-4{
   grid-column: span 4 / span 4;
 }
@@ -646,6 +683,16 @@ select{
 }
 .m-auto{
   margin: auto;
+}
+.m-3{
+  margin: 0.75rem;
+}
+.m-2{
+  margin: 0.5rem;
+}
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
 .my-2\.5{
   margin-top: 0.625rem;
@@ -694,6 +741,15 @@ select{
 .mb-2{
   margin-bottom: 0.5rem;
 }
+.mr-3{
+  margin-right: 0.75rem;
+}
+.ml-4{
+  margin-left: 1rem;
+}
+.ml-1{
+  margin-left: 0.25rem;
+}
 .block{
   display: block;
 }
@@ -709,8 +765,11 @@ select{
 .h-\[7\.5rem\]{
   height: 7.5rem;
 }
-.h-7{
-  height: 1.75rem;
+.h-full{
+  height: 100%;
+}
+.h-\[54px\]{
+  height: 54px;
 }
 .h-6{
   height: 1.5rem;
@@ -727,14 +786,17 @@ select{
 .h-1{
   height: 0.25rem;
 }
+.h-7{
+  height: 1.75rem;
+}
 .h-3{
   height: 0.75rem;
 }
-.h-\[54px\]{
-  height: 54px;
+.h-\[100rem\]{
+  height: 100rem;
 }
-.h-full{
-  height: 100%;
+.h-\[1000rem\]{
+  height: 1000rem;
 }
 .w-7{
   width: 1.75rem;
@@ -759,6 +821,18 @@ select{
 }
 .w-3{
   width: 0.75rem;
+}
+.max-w-xl{
+  max-width: 36rem;
+}
+.max-w-md{
+  max-width: 28rem;
+}
+.max-w-2xl{
+  max-width: 42rem;
+}
+.max-w-screen-2xl{
+  max-width: 1536px;
 }
 .flex-1{
   flex: 1 1 0%;
@@ -814,6 +888,10 @@ select{
 .gap-x-7{
   -moz-column-gap: 1.75rem;
        column-gap: 1.75rem;
+}
+.gap-x-5{
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
 }
 .divide-y > :not([hidden]) ~ :not([hidden]){
   --tw-divide-y-reverse: 0;
@@ -928,6 +1006,9 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
+.bg-transparent{
+  background-color: transparent;
+}
 .p-1{
   padding: 0.25rem;
 }
@@ -981,6 +1062,10 @@ select{
 .text-center{
   text-align: center;
 }
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -988,10 +1073,6 @@ select{
 .text-sm{
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 .text-xs{
   font-size: 0.75rem;
@@ -1107,12 +1188,6 @@ select{
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.focus\:border-0:focus{
-  border-width: 0px;
-}
-.focus\:border-none:focus{
-  border-style: none;
-}
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1153,12 +1228,6 @@ select{
 }
 .focus\:ring-offset-0:focus{
   --tw-ring-offset-width: 0px;
-}
-.enabled\:border-0:enabled{
-  border-width: 0px;
-}
-.enabled\:hover\:border-0:hover:enabled{
-  border-width: 0px;
 }
 .enabled\:hover\:border-orange-400:hover:enabled{
   --tw-border-opacity: 1;
@@ -1258,6 +1327,14 @@ select{
   .md\:hidden{
     display: none;
   }
+  .md\:gap-x-3{
+    -moz-column-gap: 0.75rem;
+         column-gap: 0.75rem;
+  }
+  .md\:gap-x-5{
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
   .md\:text-lg{
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1272,5 +1349,21 @@ select{
   }
   .lg\:grid-cols-4{
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .lg\:gap-x-14{
+    -moz-column-gap: 3.5rem;
+         column-gap: 3.5rem;
+  }
+  .lg\:gap-x-12{
+    -moz-column-gap: 3rem;
+         column-gap: 3rem;
+  }
+}
+@media (min-width: 1280px){
+  .xl\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+  .xl\:col-span-10{
+    grid-column: span 10 / span 10;
   }
 }
