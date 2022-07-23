@@ -392,12 +392,11 @@
             </div>
         </main>
     </div>
-
     <nav class="block fixed bottom-0 w-full bg-white py-5 px-12 rounded-t-md shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] md:hidden "
         x-data="{activeTab: 1}">
         <ul class="flex justify-between items-center gap-4">
-            <li @click="activeTab = 1">
-                <a class="flex items-center" href="#">
+            <li @click="activeTab = 1" class="w-full">
+                <a class="flex justify-center items-center" href="#">
                     <span :class="activeTab !== 1 ? 'opacity-40' : ''" class="text-slate-800">
                         <svg width="32" height="32" viewBox="0 0 32 32" fill="currentColor" stroke="white"
                             xmlns="http://www.w3.org/2000/svg">
@@ -408,8 +407,8 @@
                     <span x-show="activeTab === 1" class="mr-2 font-bold text-lg">خانه</span>
                 </a>
             </li>
-            <li @click="activeTab = 2">
-                <a class="flex items-center" href="#">
+            <li @click="activeTab = 2" class="w-full">
+                <a class="flex justify-center items-center" href="#">
                     <span :class="activeTab !== 2 ? 'opacity-40' : ''" class="text-slate-800">
                         <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -429,8 +428,8 @@
                     <span x-show="activeTab === 2" class="mr-2 font-bold text-lg">دسته بندی</span>
                 </a>
             </li>
-            <li @click="activeTab = 3">
-                <a class="flex items-center" href="#">
+            <li @click="activeTab = 3" class="w-full">
+                <a class="flex justify-center items-center" href="#">
                     <span :class="activeTab !== 3 ? 'opacity-40' : ''" class="text-slate-800">
                         <svg width="26" height="30" viewBox="0 0 26 30" stroke="white" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
@@ -442,8 +441,8 @@
                     <span x-show="activeTab === 3" class="mr-2 font-bold text-lg">سبد خرید</span>
                 </a>
             </li>
-            <li @click="activeTab = 4">
-                <a class="flex items-center" href="#">
+            <li @click="activeTab = 4" class="w-full">
+                <a class="flex justify-center items-center" href="#">
                     <span :class="activeTab !== 4 ? 'opacity-40' : ''" class="text-slate-800">
                         <svg width="29" height="25" viewBox="0 0 29 25" fill="currentColor" stroke="white"
                             xmlns="http://www.w3.org/2000/svg">
