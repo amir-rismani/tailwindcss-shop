@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop</title>
+    <title>فروشگاه اینترنتی</title>
     <link rel="stylesheet" href="./build/tailwind.css">
 </head>
 
 <body class="bg-stone-100">
+    <!-- Desktop Navbar -->
     <nav class="md:flex justify-between items-center bg-stone-50 shadow-lg h-[7.5rem] sticky top-0 z-50 hidden">
         <div class="container max-w-screen-2xl justify-between items-center hidden md:flex gap-x-16 mx-auto px-7">
             <ul class="flex gap-x-5 lg:gap-x-12">
@@ -43,6 +44,8 @@
 
         </div>
     </nav>
+
+    <!-- App bar -->
     <div class="flex justify-between items-center mt-12 md:hidden px-6">
         <div>
             <a href="#"><img src="/assets/images/logo-digitizer.svg" alt="دیجی تایزر" /></a>
@@ -56,8 +59,11 @@
             </svg>
         </div>
     </div>
+
+    <!-- Content -->
     <div class="md:container m-auto px-6 max-w-screen-2xl">
         <main>
+            <!-- Small Device Sort bar -->
             <div class="flex justify-between items-center gap-3 mt-6 mb-12 md:hidden">
                 <div class="flex flex-1 justify-start items-center p-3 bg-white rounded text-orange-600">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 ml-2" fill="none" viewBox="0 0 24 24"
@@ -78,6 +84,7 @@
             </div>
 
             <div class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5 mt-7">
+                <!-- Sidebar -->
                 <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">
                     <div
                         class="bg-white rounded-xl p-6 divide-y divide-stone-100 max-h-[calc(100vh_-_175px)] overflow-auto sticky top-36">
@@ -308,6 +315,8 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Sort bar -->
                 <div class="col-span-8 lg:col-span-9 bg-white rounded hidden md:block self-center">
                     <div class="flex justify-start items-center gap-x-7 px-2 text-gray-300 caret-transparent"
                         x-data="{ tab: 1, tabClasses: 'text-slate-800 font-bold'}">
@@ -340,6 +349,8 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- Product items -->
                 <div class="col-span-12 md:col-span-8 lg:col-span-9 md:mt-12">
                     <div x-data="{ products: [
                         {id:1, name: 'ساعت هوشمند اپل سری ۶', image: '/assets/images/static/apple_6_series.png', colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۴۸,۲۵۰,۰۰۰', brand: 'اپل'},
@@ -392,6 +403,8 @@
             </div>
         </main>
     </div>
+
+    <!-- Small Device Navbar -->
     <nav class="block fixed bottom-0 w-full bg-white py-5 px-12 rounded-t-md shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] md:hidden "
         x-data="{activeTab: 1}">
         <ul class="flex justify-between items-center gap-4">
