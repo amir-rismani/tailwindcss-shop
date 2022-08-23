@@ -112,7 +112,7 @@
     </div>
 
     <!-- Breadcrumb -->
-    <div class="flex justify-start items-center gap-x-2 my-6 px-6">
+    <div class="flex justify-start items-center gap-x-2 my-6 px-6 md:hidden">
       <span class="text-orange-400"><a href="#">تلفن همراه</a></span>
       <span>
         <svg
@@ -148,286 +148,502 @@
     <div class="md:container m-auto px-4 max-w-screen-2xl mb-24">
       <main>
         <div
-          class="flex-block flex-col justify-center items-center"
-          x-data="{ product: { id:1, name: 'گوشی آیفون ۱۳ ۱۲۸ گیگابایت', name_en: 'Apple Iphone 13 128 GB', title: 'Apple Iphone 13 128 GB', image:'/assets/images/static/iphone_13.png', colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۲۸,۲۵۰,۰۰۰', brand: 'اپل', seller: 'دیجی تایزر', warranty: '۱۸ ماه زرین خدمت', shipping:'انبار تهران'}}"
+          class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5 mt-7"
         >
-          <div class="flex flex-col px-1 mt-10 justify-center items-center">
-            <img
-              :src="product.image"
-              :alt="product.name"
-              width="228px"
-              class="mb-12"
-            />
-            <h2
-              class="text-md font-bold text-slate-900 mb-2"
-              x-text="product.name"
-            ></h2>
-            <h2
-              class="text-md text-slate-900 opacity-60 mb-9"
-              x-text="product.name_en"
-            ></h2>
-            <!-- Color Selection -->
-            <div class="flex justify-between items-center mb-7">
-              <span class="text-slate-800 text-md ml-3">انتخاب رنگ:</span>
-              <div class="flex" x-data="{selectedColor: product.colors[0]}">
-                <template x-for="color in product.colors" :key="color">
-                  <span
-                    @click="selectedColor = color"
-                    :class="color"
-                    class="w-6 h-6 rounded-full ring-1 ring-white flex justify-center items-center cursor-pointer"
+          <!-- Sidebar -->
+          <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">
+            <div
+              class="bg-white rounded-xl p-6 divide-y divide-stone-100 max-h-[calc(100vh_-_175px)] overflow-auto sticky top-36"
+            >
+              <div class="flex flex-col mb-5">
+                <h3 class="text-xl font-bold text-orange-400 mb-7">
+                  دسته بندی
+                </h3>
+                <ul>
+                  <li
+                    class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2"
                   >
-                    <span x-show="selectedColor === color" class="text-white">
+                    <span
+                      class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5"
+                    >
                       <svg
+                        class="w-4 h-5 absolute -left-1 top-2"
+                        fill="none"
+                        stroke="currentColor"
                         xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
                       >
                         <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
+                          d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                          stroke-width="1.13"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                          stroke-width="1.13"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
                         />
                       </svg>
                     </span>
-                  </span>
-                </template>
+                    <span class="text-xl">تلفن همراه</span>
+                  </li>
+                  <li
+                    class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2"
+                  >
+                    <span
+                      class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5"
+                    >
+                      <svg
+                        class="w-4 h-5 absolute -left-1 top-2"
+                        fill="none"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M4.3 1.33h7.4c2.37 0 2.97.6 2.97 2.96v4.22c0 2.38-.6 2.96-2.96 2.96H4.29c-2.36.01-2.96-.58-2.96-2.95V4.29c0-2.36.6-2.96 2.96-2.96ZM8 11.48v3.19M1.33 8.67h13.34M5 14.67h6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-xl">لپ تاپ</span>
+                  </li>
+                  <li
+                    class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2"
+                  >
+                    <span
+                      class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5"
+                    >
+                      <svg
+                        class="w-4 h-5 absolute -left-1 top-2"
+                        fill="none"
+                        stroke="currentColor"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5.67 12.67h4.66c1.56 0 2.34-.78 2.34-2.34V5.67c0-1.56-.78-2.34-2.34-2.34H5.67c-1.56 0-2.34.78-2.34 2.34v4.66c0 1.56.78 2.34 2.34 2.34ZM10.67 1.33H5.33M10.67 14.67H5.33"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M7.67 6.33v2h2"
+                          stroke-miterlimit="10"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                    <span class="text-xl">ساعت هوشمند</span>
+                  </li>
+                </ul>
               </div>
             </div>
+          </div>
 
-            <!-- Seller and Shipping -->
-            <ul class="flex flex-wrap justify-center items-center mb-7">
-              <li
-                class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
-              >
-                <span
-                  class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
+          <!-- Desktop breadcrumb -->
+          <div
+            class="col-span-8 lg:col-span-9 bg-white rounded hidden md:block self-center"
+          >
+            <div class="flex justify-start items-center gap-x-2 my-3.5 px-6">
+              <span class="text-orange-400"><a href="#">تلفن همراه</a></span>
+              <span>
+                <svg
+                  width="7"
+                  height="10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                  <svg
-                    class="w-4 h-5 absolute -left-1 top-2"
-                    fill="none"
-                    stroke="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                      stroke-width="1.13"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                      stroke-width="1.13"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span class="text-md font-bold"
-                  >فروشنده: <span class="font-normal">دیجی تایز</span></span
-                >
-              </li>
-              <li
-                class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
-              >
-                <span
-                  class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
-                >
-                  <svg
-                    class="w-4 h-5 absolute -left-1 top-2"
-                    fill="none"
-                    stroke="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                      stroke-width="1.13"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                      stroke-width="1.13"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span class="text-md font-bold"
-                  >گارانتی:
-                  <span class="font-normal">۱۸ ماه زرین خدمت</span></span
-                >
-              </li>
-              <li
-                class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
-              >
-                <span
-                  class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
-                >
-                  <svg
-                    class="w-4 h-5 absolute -left-1 top-2"
-                    fill="none"
-                    stroke="currentColor"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                      stroke-width="1.13"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                      stroke-width="1.13"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </span>
-                <span class="text-md font-bold"
-                  >ارسال توسط:
-                  <span class="font-normal">انبار تهران</span></span
-                >
-              </li>
-            </ul>
-
-            <!-- Features -->
-            <div class="bg-white w-full p-4 rounded-md mb-3">
-              <h2 class="text-xl mb-6">ویژگی‌های کالا</h2>
-              <span class="text-lg mb-2">
-                <span class="flex items-center"
-                  ><span class="w-2 h-2 ml-1 rounded-full bg-orange-400"></span>
-                  <span>حافظه داخلی</span></span
-                >
-                <span class="font-bold mr-3">۱۲۸ گیگابایت</span>
+                  <path
+                    d="M.94 4.2h.01v-.01c.38-.4 1.07-.98 1.84-1.5a12.1 12.1 0 0 1 2.04-1.2 3.92 3.92 0 0 1 .65-.19c.13 0 .25.03.38.1.14.08.26.21.33.37a4.02 4.02 0 0 1 .14.62v.03c.11.56.17 1.5.17 2.57a19.16 19.16 0 0 1-.15 2.52l-.01.08-.06.26a4.92 4.92 0 0 1-.1.42h-.01a.75.75 0 0 1-.66.43h-.03a3.4 3.4 0 0 1-.52-.15l-.22-.1c-.48-.2-1.23-.64-1.98-1.16A11.34 11.34 0 0 1 .95 5.8H.94v-.01l-.02-.01-.02-.03a5.49 5.49 0 0 1-.25-.28v-.01H.64A.75.75 0 0 1 .5 5c0-.18.05-.34.14-.47l.08-.08.04-.05.18-.2Z"
+                    stroke="#222F5D"
+                  />
+                </svg>
               </span>
-              <span class="text-lg mb-2">
-                <span class="flex items-center"
-                  ><span class="w-2 h-2 ml-1 rounded-full bg-orange-400"></span>
-                  <span>بازه اندازه صفحه نمایش</span></span
+              <span class="text-orange-400"><a href="#">برند آیفون</a></span>
+              <span>
+                <svg
+                  width="7"
+                  height="10"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                <span class="font-bold mr-3">۰.۶ اینچ و بزرگتر</span>
+                  <path
+                    d="M.94 4.2h.01v-.01c.38-.4 1.07-.98 1.84-1.5a12.1 12.1 0 0 1 2.04-1.2 3.92 3.92 0 0 1 .65-.19c.13 0 .25.03.38.1.14.08.26.21.33.37a4.02 4.02 0 0 1 .14.62v.03c.11.56.17 1.5.17 2.57a19.16 19.16 0 0 1-.15 2.52l-.01.08-.06.26a4.92 4.92 0 0 1-.1.42h-.01a.75.75 0 0 1-.66.43h-.03a3.4 3.4 0 0 1-.52-.15l-.22-.1c-.48-.2-1.23-.64-1.98-1.16A11.34 11.34 0 0 1 .95 5.8H.94v-.01l-.02-.01-.02-.03a5.49 5.49 0 0 1-.25-.28v-.01H.64A.75.75 0 0 1 .5 5c0-.18.05-.34.14-.47l.08-.08.04-.05.18-.2Z"
+                    stroke="#222F5D"
+                  />
+                </svg>
               </span>
-              <span class="text-lg mb-2">
-                <span class="flex items-center"
-                  ><span class="w-2 h-2 ml-1 rounded-full bg-orange-400"></span>
-                  <span>شبکه‌های ارتباطی</span></span
-                >
-                <span class="font-bold mr-3">2G 3G 4G 5G</span>
-              </span>
+              <span class="text-slate-800 opacity-75">آیفون ۱۳</span>
             </div>
+          </div>
 
-            <!-- Review -->
+          <!-- Product details -->
+          <div
+            class="col-span-12 md:col-span-8 lg:col-span-9 md:mt-0"
+            x-data="{ product: { id:1, name: 'گوشی آیفون ۱۳ ۱۲۸ گیگابایت', name_en: 'Apple Iphone 13 128 GB', title: 'Apple Iphone 13 128 GB', image:'/assets/images/static/iphone_13.png', colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۲۸,۲۵۰,۰۰۰', brand: 'اپل', seller: 'دیجی تایزر', warranty: '۱۸ ماه زرین خدمت', shipping:'انبار تهران'}}"
+          >
             <div
-              class="bg-white w-full p-4 pb-8 rounded-md relative mb-3"
-              x-data="{open:false}"
+              class="flex flex-col px-1 mt-10 md:mt-0 justify-center items-center md:bg-white"
             >
-              <h2 class="text-xl mb-6">نقد و بررسی این محصول</h2>
-              <p
-                class="text-lg mb-2 transition-all ease-in-out delay-1000"
-                :class="open ? 'h-auto' : 'h-28 overflow-hidden' "
-              >
-                آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه می‌کند؛ اما
-                بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های قدیمی‌تر استفاده
-                می‌کنند. با بررسی آیفون ۱۳ همراه زومیت باشید. آیفون XR، آیفون
-                ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی اپل با قیمت زیر ۱۰۰۰ دلار،
-                همواره محبوب‌ترین گوشی‌های این شرکت بوده‌اند. سال گذشته آیفون ۱۲
-                با تفاوت ناچیزش با آیفون ۱۲ پرو و قیمتی معقول، حتی در بازار
-                نابه‌سامان ایران نیز جزو پرچم‌داران پرفروش بود؛ اما امسال با
-                بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳ و شکاف عمیق موجود بین مدل‌های
-                پرو و عادی، آیا می‌توان پرچم‌دار «مقرون‌به‌صرفه‌»‌ی جدید اپل را
-                گزینه‌ی خرید مناسبی دانست؟ آیفون ۱۳ بهبودهای متعددی را نسبت به
-                گذشته تجربه می‌کند؛ اما بیشتر مناسب کسانی است که از آیفون ۱۱ یا
-                مدل‌های قدیمی‌تر استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت
-                باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی اپل با
-                قیمت زیر ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این شرکت
-                بوده‌اند. سال گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون ۱۲ پرو و
-                قیمتی معقول، حتی در بازار نابه‌سامان ایران نیز جزو پرچم‌داران
-                پرفروش بود؛ اما امسال با بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳ و
-                شکاف عمیق موجود بین مدل‌های پرو و عادی، آیا می‌توان پرچم‌دار
-                «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی خرید مناسبی دانست؟
-              </p>
-              <span
-                x-show="!open"
-                class="overlay bg-gradient-to-t from-white absolute bottom-0 right-0 w-full h-32 z-10"
-              ></span>
-              <span
-                @click="open = !open"
-                class="text-orange-400 text-lg cursor-pointer absolute bottom-2 left-4 z-20"
-                ><span x-show="!open">ادامه مطلب </span
-                ><span x-show="open">کمتر</span></span
-              >
-            </div>
+              <div class="flex flex-col md:flex-row w-full gap-3">
+                <div class="flex flex-col bg-slate-400 flex-auto">
+                  <div class="w-4/5">
+                    <img
+                      :src="product.image"
+                      :alt="product.name"
+                      width="228px"
+                      class="mb-12"
+                    />
+                  </div>
+                  <div>
+                    <h2
+                      class="text-md font-bold text-slate-900 mb-2"
+                      x-text="product.name"
+                    ></h2>
+                    <h3
+                      class="text-md text-slate-900 opacity-60 mb-9"
+                      x-text="product.name_en"
+                    ></h3>
+                    <!-- Color Selection -->
+                    <div class="flex justify-between items-center mb-7">
+                      <span class="text-slate-800 text-md ml-3"
+                        >انتخاب رنگ:</span
+                      >
+                      <div
+                        class="flex"
+                        x-data="{selectedColor: product.colors[0]}"
+                      >
+                        <template x-for="color in product.colors" :key="color">
+                          <span
+                            @click="selectedColor = color"
+                            :class="color"
+                            class="w-6 h-6 rounded-full ring-1 ring-white flex justify-center items-center cursor-pointer"
+                          >
+                            <span
+                              x-show="selectedColor === color"
+                              class="text-white"
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clip-rule="evenodd"
+                                />
+                              </svg>
+                            </span>
+                          </span>
+                        </template>
+                      </div>
+                    </div>
 
-            <!-- Tabs -->
-            <div class="bg-white w-full p-4 pb-8 rounded-md" x-data="{tab:1}">
-              <ul
-                class="bg-slate-100 rounded-[30px] flex justify-between items-center h-9 w-3/5 m-auto px-[1px]"
+                    <!-- Seller and Shipping -->
+                    <ul class="flex flex-wrap justify-center items-center mb-7">
+                      <li
+                        class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
+                      >
+                        <span
+                          class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
+                        >
+                          <svg
+                            class="w-4 h-5 absolute -left-1 top-2"
+                            fill="none"
+                            stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class="text-md font-bold"
+                          >فروشنده:
+                          <span class="font-normal">دیجی تایز</span></span
+                        >
+                      </li>
+                      <li
+                        class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
+                      >
+                        <span
+                          class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
+                        >
+                          <svg
+                            class="w-4 h-5 absolute -left-1 top-2"
+                            fill="none"
+                            stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class="text-md font-bold"
+                          >گارانتی:
+                          <span class="font-normal"
+                            >۱۸ ماه زرین خدمت</span
+                          ></span
+                        >
+                      </li>
+                      <li
+                        class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
+                      >
+                        <span
+                          class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
+                        >
+                          <svg
+                            class="w-4 h-5 absolute -left-1 top-2"
+                            fill="none"
+                            stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class="text-md font-bold"
+                          >ارسال توسط:
+                          <span class="font-normal">انبار تهران</span></span
+                        >
+                      </li>
+                    </ul>
+
+                    <!-- Features -->
+                    <div class="bg-white w-full p-4 rounded-md mb-3">
+                      <h2 class="text-xl mb-6">ویژگی‌های کالا</h2>
+                      <span class="text-lg mb-2">
+                        <span class="flex items-center"
+                          ><span
+                            class="w-2 h-2 ml-1 rounded-full bg-orange-400"
+                          ></span>
+                          <span>حافظه داخلی</span></span
+                        >
+                        <span class="font-bold mr-3">۱۲۸ گیگابایت</span>
+                      </span>
+                      <span class="text-lg mb-2">
+                        <span class="flex items-center"
+                          ><span
+                            class="w-2 h-2 ml-1 rounded-full bg-orange-400"
+                          ></span>
+                          <span>بازه اندازه صفحه نمایش</span></span
+                        >
+                        <span class="font-bold mr-3">۰.۶ اینچ و بزرگتر</span>
+                      </span>
+                      <span class="text-lg mb-2">
+                        <span class="flex items-center"
+                          ><span
+                            class="w-2 h-2 ml-1 rounded-full bg-orange-400"
+                          ></span>
+                          <span>شبکه‌های ارتباطی</span></span
+                        >
+                        <span class="font-bold mr-3">2G 3G 4G 5G</span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-1/4 bg-red-300">100</div>
+              </div>
+
+              <!-- Review -->
+              <div
+                class="bg-white w-full p-4 pb-8 rounded-md relative mb-3"
+                x-data="{open:false}"
               >
-                <li
-                  class="rounded-[30px] py-[5px] px-5 text-slate-500 cursor-pointer transition-all"
-                  @click="tab = 0"
-                  :class="tab === 0 ? 'bg-white text-slate-800 shadow-[0_1px_8px_0px_rgba(0,0,0,0.12)]' : 'text-slate-500'"
+                <h2 class="text-xl mb-6">نقد و بررسی این محصول</h2>
+                <p
+                  class="text-lg mb-2 transition-all ease-in-out delay-1000"
+                  :class="open ? 'h-auto' : 'h-28 overflow-hidden' "
                 >
-                  دوربین
-                </li>
-                <li
-                  class="rounded-[30px] py-[5px] px-5 text-slate-500 cursor-pointer transition-all"
-                  @click="tab = 1"
-                  :class="tab === 1 ? 'bg-white text-slate-800 shadow-[0_1px_8px_0px_rgba(0,0,0,0.12)]' : 'text-slate-500'"
+                  آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه می‌کند؛ اما
+                  بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های قدیمی‌تر
+                  استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت باشید. آیفون
+                  XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی اپل با قیمت زیر
+                  ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این شرکت بوده‌اند. سال
+                  گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون ۱۲ پرو و قیمتی معقول،
+                  حتی در بازار نابه‌سامان ایران نیز جزو پرچم‌داران پرفروش بود؛
+                  اما امسال با بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳ و شکاف عمیق
+                  موجود بین مدل‌های پرو و عادی، آیا می‌توان پرچم‌دار
+                  «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی خرید مناسبی دانست؟
+                  آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه می‌کند؛ اما
+                  بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های قدیمی‌تر
+                  استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت باشید. آیفون
+                  XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی اپل با قیمت زیر
+                  ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این شرکت بوده‌اند. سال
+                  گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون ۱۲ پرو و قیمتی معقول،
+                  حتی در بازار نابه‌سامان ایران نیز جزو پرچم‌داران پرفروش بود؛
+                  اما امسال با بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳ و شکاف عمیق
+                  موجود بین مدل‌های پرو و عادی، آیا می‌توان پرچم‌دار
+                  «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی خرید مناسبی دانست؟
+                </p>
+                <span
+                  x-show="!open"
+                  class="overlay bg-gradient-to-t from-white absolute bottom-0 right-0 w-full h-32 z-10"
+                ></span>
+                <span
+                  @click="open = !open"
+                  class="text-orange-400 text-lg cursor-pointer absolute bottom-2 left-4 z-10"
+                  ><span x-show="!open">ادامه مطلب </span
+                  ><span x-show="open">کمتر</span></span
                 >
-                  طراحی
-                </li>
-                <li
-                  class="rounded-[30px] py-[5px] px-5 text-slate-500 cursor-pointer transition-all"
-                  @click="tab = 2"
-                  :class="tab === 2 ? 'bg-white text-slate-800 shadow-[0_1px_8px_0px_rgba(0,0,0,0.12)]' : 'text-slate-500'"
+              </div>
+
+              <!-- Tabs -->
+              <div class="bg-white w-full p-4 pb-8 rounded-md" x-data="{tab:0}">
+                <ul
+                  class="bg-slate-100 rounded-[30px] flex justify-between items-center h-9 w-100 sm:w-3/5 m-0 sm:m-auto px-[1px]"
                 >
-                  باتری
-                </li>
-              </ul>
-              <div>
-                <div class="text-lg mb-2 transition-all">
-                  <h2 class="text-xl mb-6">طراحی</h2>
-                  <p>
-                    آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه می‌کند؛ اما
-                    بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های قدیمی‌تر
-                    استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت باشید. آیفون
-                    XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی اپل با قیمت زیر
-                    ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این شرکت بوده‌اند. سال
-                    گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون ۱۲ پرو و قیمتی
-                    معقول، حتی در بازار نابه‌سامان ایران نیز جزو پرچم‌داران
-                    پرفروش بود؛ اما امسال با بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳
-                    و شکاف عمیق موجود بین مدل‌های پرو و عادی، آیا می‌توان
-                    پرچم‌دار «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی خرید مناسبی
-                    دانست؟ آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه
-                    می‌کند؛ اما بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های
-                    قدیمی‌تر استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت
-                    باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی اپل
-                    با قیمت زیر ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این شرکت
-                    بوده‌اند. سال گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون ۱۲ پرو
-                    و قیمتی معقول، حتی در بازار نابه‌سامان ایران نیز جزو
-                    پرچم‌داران پرفروش بود؛ اما امسال با بهبودهای نه‌چندان
-                    چشم‌گیر آیفون ۱۳ و شکاف عمیق موجود بین مدل‌های پرو و عادی،
-                    آیا می‌توان پرچم‌دار «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی
-                    خرید مناسبی دانست؟
-                  </p>
+                  <li
+                    class="rounded-[30px] py-[5px] px-5 text-slate-500 cursor-pointer transition-all"
+                    @click="tab = 0"
+                    :class="tab === 0 ? 'bg-white text-slate-800 shadow-[0_1px_8px_0px_rgba(0,0,0,0.12)]' : 'text-slate-500'"
+                  >
+                    دوربین
+                  </li>
+                  <li
+                    class="rounded-[30px] py-[5px] px-5 text-slate-500 cursor-pointer transition-all"
+                    @click="tab = 1"
+                    :class="tab === 1 ? 'bg-white text-slate-800 shadow-[0_1px_8px_0px_rgba(0,0,0,0.12)]' : 'text-slate-500'"
+                  >
+                    طراحی
+                  </li>
+                  <li
+                    class="rounded-[30px] py-[5px] px-5 text-slate-500 cursor-pointer transition-all"
+                    @click="tab = 2"
+                    :class="tab === 2 ? 'bg-white text-slate-800 shadow-[0_1px_8px_0px_rgba(0,0,0,0.12)]' : 'text-slate-500'"
+                  >
+                    باتری
+                  </li>
+                </ul>
+                <div class="mt-3">
+                  <div x-show="tab===0" class="text-lg mb-2 transition-all">
+                    <h2 class="text-xl mb-6">دوربین</h2>
+                    <p>
+                      آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه می‌کند؛
+                      اما بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های
+                      قدیمی‌تر استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت
+                      باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی
+                      اپل با قیمت زیر ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این
+                      شرکت بوده‌اند. سال گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون
+                      ۱۲ پرو و قیمتی معقول، حتی در بازار نابه‌سامان ایران نیز
+                      جزو پرچم‌داران پرفروش بود؛ اما امسال با بهبودهای نه‌چندان
+                      چشم‌گیر آیفون ۱۳ و شکاف عمیق موجود بین مدل‌های پرو و عادی،
+                      آیا می‌توان پرچم‌دار «مقرون‌به‌صرفه‌»‌ی جدید اپل را
+                      گزینه‌ی خرید مناسبی دانست؟ آیفون ۱۳ بهبودهای متعددی را
+                      نسبت به گذشته تجربه می‌کند؛ اما بیشتر مناسب کسانی است که
+                      از آیفون ۱۱ یا مدل‌های قدیمی‌تر استفاده می‌کنند. با بررسی
+                      آیفون ۱۳ همراه زومیت باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛
+                      پرچم‌داران اقتصادی اپل با قیمت زیر ۱۰۰۰ دلار، همواره
+                      محبوب‌ترین گوشی‌های این شرکت بوده‌اند. سال گذشته آیفون ۱۲
+                      با تفاوت ناچیزش با آیفون ۱۲ پرو و قیمتی معقول، حتی در
+                      بازار نابه‌سامان ایران نیز جزو پرچم‌داران پرفروش بود؛ اما
+                      امسال با بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳ و شکاف عمیق
+                      موجود بین مدل‌های پرو و عادی، آیا می‌توان پرچم‌دار
+                      «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی خرید مناسبی دانست؟
+                    </p>
+                  </div>
+                  <div x-show="tab===1" class="text-lg mb-2 transition-all">
+                    <h2 class="text-xl mb-6">طراحی</h2>
+                    <p>
+                      آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه می‌کند؛
+                      اما بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های
+                      قدیمی‌تر استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت
+                      باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی
+                      اپل با قیمت زیر ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این
+                      شرکت بوده‌اند. سال گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون
+                      ۱۲ پرو و قیمتی معقول، حتی در بازار نابه‌سامان ایران نیز
+                      جزو پرچم‌داران پرفروش بود؛ اما امسال با بهبودهای نه‌چندان
+                      چشم‌گیر آیفون ۱۳ و شکاف عمیق موجود بین مدل‌های پرو و عادی،
+                      آیا می‌توان پرچم‌دار «مقرون‌به‌صرفه‌»‌ی جدید اپل را
+                      گزینه‌ی خرید مناسبی دانست؟ آیفون ۱۳ بهبودهای متعددی را
+                      نسبت به گذشته تجربه می‌کند؛ اما بیشتر مناسب کسانی است که
+                      از آیفون ۱۱ یا مدل‌های قدیمی‌تر استفاده می‌کنند. با بررسی
+                      آیفون ۱۳ همراه زومیت باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛
+                      پرچم‌داران اقتصادی اپل با قیمت زیر ۱۰۰۰ دلار، همواره
+                      محبوب‌ترین گوشی‌های این شرکت بوده‌اند. سال گذشته آیفون ۱۲
+                      با تفاوت ناچیزش با آیفون ۱۲ پرو و قیمتی معقول، حتی در
+                      بازار نابه‌سامان ایران نیز جزو پرچم‌داران پرفروش بود؛ اما
+                      امسال با بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳ و شکاف عمیق
+                      موجود بین مدل‌های پرو و عادی، آیا می‌توان پرچم‌دار
+                      «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی خرید مناسبی دانست؟
+                    </p>
+                  </div>
+                  <div x-show="tab===2" class="text-lg mb-2 transition-all">
+                    <h2 class="text-xl mb-6">باتری</h2>
+                    <p>
+                      آیفون ۱۳ بهبودهای متعددی را نسبت به گذشته تجربه می‌کند؛
+                      اما بیشتر مناسب کسانی است که از آیفون ۱۱ یا مدل‌های
+                      قدیمی‌تر استفاده می‌کنند. با بررسی آیفون ۱۳ همراه زومیت
+                      باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛ پرچم‌داران اقتصادی
+                      اپل با قیمت زیر ۱۰۰۰ دلار، همواره محبوب‌ترین گوشی‌های این
+                      شرکت بوده‌اند. سال گذشته آیفون ۱۲ با تفاوت ناچیزش با آیفون
+                      ۱۲ پرو و قیمتی معقول، حتی در بازار نابه‌سامان ایران نیز
+                      جزو پرچم‌داران پرفروش بود؛ اما امسال با بهبودهای نه‌چندان
+                      چشم‌گیر آیفون ۱۳ و شکاف عمیق موجود بین مدل‌های پرو و عادی،
+                      آیا می‌توان پرچم‌دار «مقرون‌به‌صرفه‌»‌ی جدید اپل را
+                      گزینه‌ی خرید مناسبی دانست؟ آیفون ۱۳ بهبودهای متعددی را
+                      نسبت به گذشته تجربه می‌کند؛ اما بیشتر مناسب کسانی است که
+                      از آیفون ۱۱ یا مدل‌های قدیمی‌تر استفاده می‌کنند. با بررسی
+                      آیفون ۱۳ همراه زومیت باشید. آیفون XR، آیفون ۱۱، آیفون ۱۲؛
+                      پرچم‌داران اقتصادی اپل با قیمت زیر ۱۰۰۰ دلار، همواره
+                      محبوب‌ترین گوشی‌های این شرکت بوده‌اند. سال گذشته آیفون ۱۲
+                      با تفاوت ناچیزش با آیفون ۱۲ پرو و قیمتی معقول، حتی در
+                      بازار نابه‌سامان ایران نیز جزو پرچم‌داران پرفروش بود؛ اما
+                      امسال با بهبودهای نه‌چندان چشم‌گیر آیفون ۱۳ و شکاف عمیق
+                      موجود بین مدل‌های پرو و عادی، آیا می‌توان پرچم‌دار
+                      «مقرون‌به‌صرفه‌»‌ی جدید اپل را گزینه‌ی خرید مناسبی دانست؟
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Add To Card -->
-            <div
-              class="flex w-full fixed bottom-0 justify-between items-center bg-white h-[75px] px-4 rounded-t-lg shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)]"
-            >
-              <button
-                class="bg-orange-400 text-stone-100 text-lg sm:text-xl font-bold py-3 px-4 rounded flex-grow-1 basis-3/5"
+              <!-- Add To Card -->
+              <div
+                class="flex w-full fixed bottom-0 justify-between items-center bg-white h-[75px] px-4 rounded-t-lg shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] z-50 md:hidden"
               >
-                اضافه به سبد خرید
-              </button>
-              <div class="flex flex-col">
-                <span class="text-lg sm:text-2xl">۲۸,۲۵۰,۰۰۰</span
-                ><span>تومان</span>
+                <button
+                  class="bg-orange-400 text-stone-100 text-lg sm:text-xl font-bold py-3 px-4 rounded flex-grow-1 basis-3/5"
+                >
+                  اضافه به سبد خرید
+                </button>
+                <div class="flex flex-col">
+                  <span class="text-lg sm:text-2xl">۲۸,۲۵۰,۰۰۰</span
+                  ><span>تومان</span>
+                </div>
               </div>
             </div>
           </div>
