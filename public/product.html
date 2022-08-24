@@ -281,34 +281,61 @@
 
           <!-- Product details -->
           <div
-            class="col-span-12 md:col-span-8 lg:col-span-9 md:mt-0"
-            x-data="{ product: { id:1, name: 'گوشی آیفون ۱۳ ۱۲۸ گیگابایت', name_en: 'Apple Iphone 13 128 GB', title: 'Apple Iphone 13 128 GB', image:'/assets/images/static/iphone_13.png', colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۲۸,۲۵۰,۰۰۰', brand: 'اپل', seller: 'دیجی تایزر', warranty: '۱۸ ماه زرین خدمت', shipping:'انبار تهران'}}"
+            class="col-span-12 md:col-span-8 lg:col-span-9 md:mt-0 h-auto"
+            x-data="{ product: { id:1, name: 'گوشی آیفون ۱۳ ۱۲۸ گیگابایت', name_en: 'Apple Iphone 13 128 GB', title: 'Apple Iphone 13 128 GB', images:['/assets/images/static/iphone_13.png', '/assets/images/static/thumbnail_image_1.png', '/assets/images/static/thumbnail_image_2.png', '/assets/images/static/thumbnail_image_3.png'], colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۲۸,۲۵۰,۰۰۰', brand: 'اپل', seller: 'دیجی تایزر', warranty: '۱۸ ماه زرین خدمت', shipping:'انبار تهران'}}"
           >
             <div
-              class="flex flex-col px-1 mt-10 md:mt-0 justify-center items-center md:bg-white"
+              class="flex flex-col px-1 mt-10 md:mt-0 md:p-14 justify-center items-center md:bg-white"
             >
               <div class="flex flex-col md:flex-row w-full gap-3">
-                <div class="flex flex-col bg-slate-400 flex-auto">
-                  <div class="w-4/5">
+                <div class="md:flex flex-auto">
+                  <div class="w-auto lg:w-2/4">
                     <img
-                      :src="product.image"
+                      :src="product.images[0]"
                       :alt="product.name"
                       width="228px"
-                      class="mb-12"
+                      class="mx-auto md:w-auto mb-8"
                     />
+                    <div
+                      class="hidden md:flex md:justify-around md:items-center gap-2"
+                    >
+                      <span class="border border-gray-300 rounded-lg p-3">
+                        <img
+                          :src="product.images[1]"
+                          :alt="product.name"
+                          height="85px"
+                        />
+                      </span>
+                      <span class="border border-gray-300 rounded-lg p-3">
+                        <img
+                          :src="product.images[2]"
+                          :alt="product.name"
+                          height="85px"
+                        />
+                      </span>
+                      <span class="border border-gray-300 rounded-lg p-3">
+                        <img
+                          :src="product.images[3]"
+                          :alt="product.name"
+                          height="85px"
+                        />
+                      </span>
+                    </div>
                   </div>
-                  <div>
+                  <div class="w-full flex flex-col items-center md:items-start">
                     <h2
-                      class="text-md font-bold text-slate-900 mb-2"
+                      class="text-md font-bold text-slate-900 mb-2 md:text-2xl md:mr-11"
                       x-text="product.name"
                     ></h2>
                     <h3
-                      class="text-md text-slate-900 opacity-60 mb-9"
+                      class="text-md text-slate-900 opacity-60 mb-9 md:mr-11 md:text-xl"
                       x-text="product.name_en"
                     ></h3>
                     <!-- Color Selection -->
-                    <div class="flex justify-between items-center mb-7">
-                      <span class="text-slate-800 text-md ml-3"
+                    <div
+                      class="flex justify-between items-center mb-7 md:mr-11"
+                    >
+                      <span class="text-slate-800 text-md ml-3 md:text-xl"
                         >انتخاب رنگ:</span
                       >
                       <div
@@ -344,7 +371,9 @@
                     </div>
 
                     <!-- Seller and Shipping -->
-                    <ul class="flex flex-wrap justify-center items-center mb-7">
+                    <ul
+                      class="flex flex-wrap justify-center items-center mb-7 md:hidden"
+                    >
                       <li
                         class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
                       >
@@ -443,7 +472,9 @@
                     </ul>
 
                     <!-- Features -->
-                    <div class="bg-white w-full p-4 rounded-md mb-3">
+                    <div
+                      class="bg-white w-full p-4 rounded-md mb-3 md:mr-11 md:p-0"
+                    >
                       <h2 class="text-xl mb-6">ویژگی‌های کالا</h2>
                       <span class="text-lg mb-2">
                         <span class="flex items-center"
@@ -476,7 +507,119 @@
                   </div>
                 </div>
 
-                <div class="w-1/4 bg-red-300">100</div>
+                <div class="w-1/4 hidden md:block">
+                  <div class="bg-gray-100 p-3">
+                    <ul class="flex flex-col justify-center items-start mb-7">
+                      <li
+                        class="flex py-3 caret-transparent px-2 w-md-1/2 w-100"
+                      >
+                        <span
+                          class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
+                        >
+                          <svg
+                            class="w-4 h-5 absolute -left-1 top-2"
+                            fill="none"
+                            stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class="text-md font-bold"
+                          >فروشنده:
+                          <span class="font-normal">دیجی تایز</span></span
+                        >
+                      </li>
+                      <li
+                        class="flex py-3 caret-transparent px-2 w-md-1/2 w-100"
+                      >
+                        <span
+                          class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
+                        >
+                          <svg
+                            class="w-4 h-5 absolute -left-1 top-2"
+                            fill="none"
+                            stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class="text-md font-bold"
+                          >گارانتی:
+                          <span class="font-normal"
+                            >۱۸ ماه زرین خدمت</span
+                          ></span
+                        >
+                      </li>
+                      <li
+                        class="flex py-3 caret-transparent px-2 w-md-1/2 w-100"
+                      >
+                        <span
+                          class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
+                        >
+                          <svg
+                            class="w-4 h-5 absolute -left-1 top-2"
+                            fill="none"
+                            stroke="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
+                              stroke-width="1.13"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </span>
+                        <span class="text-md font-bold"
+                          >ارسال توسط:
+                          <span class="font-normal">انبار تهران</span></span
+                        >
+                      </li>
+                    </ul>
+
+                    <div
+                      class="flex justify-end items-center text-orange-600 mb-3"
+                    >
+                      <span class="text-2xl">۲۸,۲۵۰,۰۰۰</span
+                      ><span class="mr-1">تومان</span>
+                    </div>
+                    <button
+                      class="bg-orange-400 text-stone-100 text-lg sm:text-xl font-bold py-3 px-4 rounded w-full"
+                    >
+                      اضافه به سبد خرید
+                    </button>
+                  </div>
+                </div>
               </div>
 
               <!-- Review -->
