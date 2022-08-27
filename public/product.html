@@ -151,7 +151,7 @@
           class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5 mt-7"
         >
           <!-- Sidebar -->
-          <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">
+          <div class="col-span-4 md:col-span-2 row-span-2 hidden md:block">
             <div
               class="bg-white rounded-xl p-6 divide-y divide-stone-100 max-h-[calc(100vh_-_175px)] overflow-auto sticky top-36"
             >
@@ -243,9 +243,7 @@
           </div>
 
           <!-- Desktop breadcrumb -->
-          <div
-            class="col-span-8 lg:col-span-9 bg-white rounded hidden md:block self-center"
-          >
+          <div class="col-span-9 bg-white rounded hidden md:block self-center">
             <div class="flex justify-start items-center gap-x-2 my-3.5 px-6">
               <span class="text-orange-400"><a href="#">تلفن همراه</a></span>
               <span>
@@ -281,13 +279,13 @@
 
           <!-- Product details -->
           <div
-            class="col-span-12 md:col-span-8 lg:col-span-9 md:mt-0 h-auto"
+            class="col-span-12 md:col-span-9 md:mt-0 h-auto"
             x-data="{ product: { id:1, name: 'گوشی آیفون ۱۳ ۱۲۸ گیگابایت', name_en: 'Apple Iphone 13 128 GB', title: 'Apple Iphone 13 128 GB', images:['/assets/images/static/iphone_13.png', '/assets/images/static/thumbnail_image_1.png', '/assets/images/static/thumbnail_image_2.png', '/assets/images/static/thumbnail_image_3.png'], colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۲۸,۲۵۰,۰۰۰', brand: 'اپل', seller: 'دیجی تایزر', warranty: '۱۸ ماه زرین خدمت', shipping:'انبار تهران'}}"
           >
             <div
-              class="flex flex-col px-1 mt-10 md:mt-0 md:p-14 justify-center items-center md:bg-white"
+              class="flex flex-col px-1 mt-10 md:mt-0 md:p-5 justify-center items-center md:bg-white"
             >
-              <div class="flex flex-col md:flex-row w-full gap-3">
+              <div class="flex flex-col md:flex-row w-full gap-3 p-5">
                 <div class="md:flex flex-auto">
                   <div class="w-auto lg:w-2/4">
                     <img
@@ -322,19 +320,20 @@
                       </span>
                     </div>
                   </div>
-                  <div class="w-full flex flex-col items-center md:items-start">
+                  <div
+                    class="w-full flex flex-col items-center md:items-start md:px-11"
+                  >
                     <h2
-                      class="text-md font-bold text-slate-900 mb-2 md:text-2xl md:mr-11"
+                      class="text-md font-bold text-slate-900 mb-2 md:text-2xl"
                       x-text="product.name"
                     ></h2>
                     <h3
-                      class="text-md text-slate-900 opacity-60 mb-9 md:mr-11 md:text-xl"
+                      class="text-md text-slate-900 opacity-60 md:text-xl"
                       x-text="product.name_en"
                     ></h3>
+                    <hr class="hidden md:block border-stone-100 w-full my-6" />
                     <!-- Color Selection -->
-                    <div
-                      class="flex justify-between items-center mb-7 md:mr-11"
-                    >
+                    <div class="flex justify-between items-center mb-7">
                       <span class="text-slate-800 text-md ml-3 md:text-xl"
                         >انتخاب رنگ:</span
                       >
@@ -472,9 +471,7 @@
                     </ul>
 
                     <!-- Features -->
-                    <div
-                      class="bg-white w-full p-4 rounded-md mb-3 md:mr-11 md:p-0"
-                    >
+                    <div class="bg-white w-full p-4 rounded-md mb-3 md:p-0">
                       <h2 class="text-xl mb-6">ویژگی‌های کالا</h2>
                       <span class="text-lg mb-2">
                         <span class="flex items-center"
