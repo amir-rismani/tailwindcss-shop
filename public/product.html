@@ -145,13 +145,13 @@
     </div>
 
     <!-- Content -->
-    <div class="md:container m-auto px-4 max-w-screen-2xl mb-24">
+    <div class="container m-auto px-4 max-w-screen-2xl mb-24">
       <main>
         <div
           class="grid grid-cols-12 grid-rows-[54px_minmax(500px,_1fr)] gap-5 mt-7"
         >
           <!-- Sidebar -->
-          <div class="col-span-4 md:col-span-2 row-span-2 hidden md:block">
+          <div class="col-span-4 lg:col-span-3 row-span-2 hidden md:block">
             <div
               class="bg-white rounded-xl p-6 divide-y divide-stone-100 max-h-[calc(100vh_-_175px)] overflow-auto sticky top-36"
             >
@@ -160,9 +160,7 @@
                   دسته بندی
                 </h3>
                 <ul>
-                  <li
-                    class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2"
-                  >
+                  <li class="flex py-3 caret-transparent px-2">
                     <span
                       class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5"
                     >
@@ -188,9 +186,7 @@
                     </span>
                     <span class="text-xl">تلفن همراه</span>
                   </li>
-                  <li
-                    class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2"
-                  >
+                  <li class="flex py-3 caret-transparent px-2">
                     <span
                       class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5"
                     >
@@ -209,9 +205,7 @@
                     </span>
                     <span class="text-xl">لپ تاپ</span>
                   </li>
-                  <li
-                    class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2"
-                  >
+                  <li class="flex py-3 caret-transparent px-2">
                     <span
                       class="bg-gray-200 w-4 h-4 block rounded-full relative top-0 right-1 text-slate-800 ml-5"
                     >
@@ -243,7 +237,9 @@
           </div>
 
           <!-- Desktop breadcrumb -->
-          <div class="col-span-9 bg-white rounded hidden md:block self-center">
+          <div
+            class="col-span-8 lg:col-span-9 bg-white rounded hidden md:block self-center"
+          >
             <div class="flex justify-start items-center gap-x-2 my-3.5 px-6">
               <span class="text-orange-400"><a href="#">تلفن همراه</a></span>
               <span>
@@ -279,7 +275,7 @@
 
           <!-- Product details -->
           <div
-            class="col-span-12 md:col-span-9 md:mt-0 h-auto"
+            class="col-span-12 md:col-span-8 lg:col-span-9 lg:mt-5"
             x-data="{ product: { id:1, name: 'گوشی آیفون ۱۳ ۱۲۸ گیگابایت', name_en: 'Apple Iphone 13 128 GB', title: 'Apple Iphone 13 128 GB', images:['/assets/images/static/iphone_13.png', '/assets/images/static/thumbnail_image_1.png', '/assets/images/static/thumbnail_image_2.png', '/assets/images/static/thumbnail_image_3.png'], colors: ['bg-orange-300', 'bg-indigo-600', 'bg-yellow-400', 'bg-stone-200'], price: '۲۸,۲۵۰,۰۰۰', brand: 'اپل', seller: 'دیجی تایزر', warranty: '۱۸ ماه زرین خدمت', shipping:'انبار تهران'}}"
           >
             <div
@@ -374,7 +370,7 @@
                       class="flex flex-wrap justify-center items-center mb-7 md:hidden"
                     >
                       <li
-                        class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
+                        class="flex py-3 caret-transparent px-2 w-md-1/2 w-100"
                       >
                         <span
                           class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
@@ -382,18 +378,26 @@
                           <svg
                             class="w-4 h-5 absolute -left-1 top-2"
                             fill="none"
-                            stroke="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                              stroke-width="1.13"
+                              d="M1.756 6.545v2.62c0 2.618 1.05 3.668 3.669 3.668h3.144c2.62 0 3.67-1.05 3.67-3.669v-2.62"
+                              stroke="#222F5D"
+                              stroke-width=".875"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
-                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                              stroke-width="1.13"
+                              d="M7 7c1.067 0 1.855-.87 1.75-1.937l-.385-3.897H5.641L5.25 5.063C5.145 6.13 5.932 6.999 7 6.999Z"
+                              stroke="#222F5D"
+                              stroke-width=".875"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.68 7c1.18 0 2.043-.957 1.926-2.13l-.163-1.604c-.21-1.517-.794-2.1-2.322-2.1H8.34l.409 4.09c.1.962.968 1.743 1.93 1.743ZM3.29 7c.963 0 1.832-.782 1.925-1.745l.128-1.289.28-2.8H3.844c-1.528 0-2.111.583-2.321 2.1L1.365 4.87C1.248 6.043 2.112 7 3.29 7ZM7 9.916c-.974 0-1.458.484-1.458 1.458v1.459h2.916v-1.459c0-.974-.484-1.458-1.458-1.458Z"
+                              stroke="#222F5D"
+                              stroke-width=".875"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
@@ -405,7 +409,7 @@
                         >
                       </li>
                       <li
-                        class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
+                        class="flex py-3 caret-transparent px-2 w-md-1/2 w-100"
                       >
                         <span
                           class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
@@ -413,18 +417,12 @@
                           <svg
                             class="w-4 h-5 absolute -left-1 top-2"
                             fill="none"
-                            stroke="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                              stroke-width="1.13"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                              stroke-width="1.13"
+                              d="M7.43 1.58 3.896 2.91c-.815.305-1.48 1.268-1.48 2.132v5.263c0 .836.552 1.934 1.225 2.437l3.046 2.274c.998.75 2.642.75 3.64 0l3.046-2.274c.673-.503 1.226-1.6 1.226-2.437V5.043c0-.87-.666-1.834-1.48-2.139L9.583 1.58c-.602-.22-1.566-.22-2.154 0Z"
+                              stroke="#222F5D"
+                              stroke-width="1.063"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
@@ -438,7 +436,7 @@
                         >
                       </li>
                       <li
-                        class="flex py-3 cursor-pointer caret-transparent hover:bg-gray-50 px-2 w-md-1/2 w-100"
+                        class="flex py-3 caret-transparent px-2 w-md-1/2 w-100"
                       >
                         <span
                           class="bg-gray-200 w-4 h-4 block rounded-full relative -top-2 right-1 text-slate-800 ml-5"
@@ -446,18 +444,42 @@
                           <svg
                             class="w-4 h-5 absolute -left-1 top-2"
                             fill="none"
-                            stroke="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                              stroke-width="1.13"
+                              d="M10 1.333V8c0 .733-.6 1.333-1.333 1.333H1.333V5.08a2.6 2.6 0 0 0 2.06.92 2.562 2.562 0 0 0 1.734-.707c.206-.173.38-.393.513-.633.24-.407.373-.887.36-1.387a2.655 2.655 0 0 0-.907-1.94H10Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
-                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                              stroke-width="1.13"
+                              d="M14.667 9.333v2c0 1.107-.894 2-2 2H12C12 12.6 11.4 12 10.667 12c-.734 0-1.334.6-1.334 1.333H6.667c0-.733-.6-1.333-1.334-1.333C4.6 12 4 12.6 4 13.333h-.667c-1.106 0-2-.893-2-2v-2h7.334C9.4 9.333 10 8.733 10 8V3.333h1.227c.48 0 .92.26 1.16.673L13.527 6h-.86C12.3 6 12 6.3 12 6.666v2c0 .367.3.667.667.667h2Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M5.333 14.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667ZM10.667 14.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667ZM14.667 8v1.333h-2A.669.669 0 0 1 12 8.667v-2c0-.367.3-.667.667-.667h.86l1.14 2Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M6 3.333c0 .8-.353 1.513-.907 2A2.666 2.666 0 1 1 3.333.666 2.666 2.666 0 0 1 6 3.333Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M3.5 2.499v1l-.833.5"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-miterlimit="10"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
@@ -504,9 +526,11 @@
                   </div>
                 </div>
 
-                <div class="w-1/4 hidden md:block">
+                <div class="w-full lg:w-1/4 hidden md:block">
                   <div class="bg-gray-100 p-3">
-                    <ul class="flex flex-col justify-center items-start mb-7">
+                    <ul
+                      class="flex-wrap justify-start items-center mb-7 hidden md:flex"
+                    >
                       <li
                         class="flex py-3 caret-transparent px-2 w-md-1/2 w-100"
                       >
@@ -516,18 +540,26 @@
                           <svg
                             class="w-4 h-5 absolute -left-1 top-2"
                             fill="none"
-                            stroke="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                              stroke-width="1.13"
+                              d="M1.756 6.545v2.62c0 2.618 1.05 3.668 3.669 3.668h3.144c2.62 0 3.67-1.05 3.67-3.669v-2.62"
+                              stroke="#222F5D"
+                              stroke-width=".875"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
-                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                              stroke-width="1.13"
+                              d="M7 7c1.067 0 1.855-.87 1.75-1.937l-.385-3.897H5.641L5.25 5.063C5.145 6.13 5.932 6.999 7 6.999Z"
+                              stroke="#222F5D"
+                              stroke-width=".875"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M10.68 7c1.18 0 2.043-.957 1.926-2.13l-.163-1.604c-.21-1.517-.794-2.1-2.322-2.1H8.34l.409 4.09c.1.962.968 1.743 1.93 1.743ZM3.29 7c.963 0 1.832-.782 1.925-1.745l.128-1.289.28-2.8H3.844c-1.528 0-2.111.583-2.321 2.1L1.365 4.87C1.248 6.043 2.112 7 3.29 7ZM7 9.916c-.974 0-1.458.484-1.458 1.458v1.459h2.916v-1.459c0-.974-.484-1.458-1.458-1.458Z"
+                              stroke="#222F5D"
+                              stroke-width=".875"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
@@ -547,18 +579,12 @@
                           <svg
                             class="w-4 h-5 absolute -left-1 top-2"
                             fill="none"
-                            stroke="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                              stroke-width="1.13"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                            <path
-                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                              stroke-width="1.13"
+                              d="M7.43 1.58 3.896 2.91c-.815.305-1.48 1.268-1.48 2.132v5.263c0 .836.552 1.934 1.225 2.437l3.046 2.274c.998.75 2.642.75 3.64 0l3.046-2.274c.673-.503 1.226-1.6 1.226-2.437V5.043c0-.87-.666-1.834-1.48-2.139L9.583 1.58c-.602-.22-1.566-.22-2.154 0Z"
+                              stroke="#222F5D"
+                              stroke-width="1.063"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
@@ -580,18 +606,42 @@
                           <svg
                             class="w-4 h-5 absolute -left-1 top-2"
                             fill="none"
-                            stroke="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
-                              d="M13 4.75v7.5c0 3-.75 3.75-3.75 3.75h-4.5c-3 0-3.75-.75-3.75-3.75v-7.5C1 1.75 1.75 1 4.75 1h4.5c3 0 3.75.75 3.75 3.75ZM8.5 3.63h-3"
-                              stroke-width="1.13"
+                              d="M10 1.333V8c0 .733-.6 1.333-1.333 1.333H1.333V5.08a2.6 2.6 0 0 0 2.06.92 2.562 2.562 0 0 0 1.734-.707c.206-.173.38-.393.513-.633.24-.407.373-.887.36-1.387a2.655 2.655 0 0 0-.907-1.94H10Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
                             <path
-                              d="M7 13.82a1.16 1.16 0 1 0 0-2.32 1.16 1.16 0 0 0 0 2.32Z"
-                              stroke-width="1.13"
+                              d="M14.667 9.333v2c0 1.107-.894 2-2 2H12C12 12.6 11.4 12 10.667 12c-.734 0-1.334.6-1.334 1.333H6.667c0-.733-.6-1.333-1.334-1.333C4.6 12 4 12.6 4 13.333h-.667c-1.106 0-2-.893-2-2v-2h7.334C9.4 9.333 10 8.733 10 8V3.333h1.227c.48 0 .92.26 1.16.673L13.527 6h-.86C12.3 6 12 6.3 12 6.666v2c0 .367.3.667.667.667h2Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M5.333 14.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667ZM10.667 14.667a1.333 1.333 0 1 0 0-2.667 1.333 1.333 0 0 0 0 2.667ZM14.667 8v1.333h-2A.669.669 0 0 1 12 8.667v-2c0-.367.3-.667.667-.667h.86l1.14 2Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M6 3.333c0 .8-.353 1.513-.907 2A2.666 2.666 0 1 1 3.333.666 2.666 2.666 0 0 1 6 3.333Z"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-miterlimit="10"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M3.5 2.499v1l-.833.5"
+                              stroke="#222F5D"
+                              stroke-width="1.125"
+                              stroke-miterlimit="10"
                               stroke-linecap="round"
                               stroke-linejoin="round"
                             />
@@ -789,6 +839,89 @@
           </div>
         </div>
       </main>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-white hidden md:block">
+      <div
+        class="container m-auto max-w-screen-2xl mx-auto flex justify-between p-16 gap-16 lg:gap-32"
+      >
+        <div class="flex flex-col gap-5 flex-auto w-full">
+          <div class="flex items-center">
+            <svg
+              width="168"
+              height="45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14.565 2.796v6.82h-6.82v-6.82h6.82Zm3.3 19.668c.293 0 .44.147.44.44v7.656c0 .293-.147.44-.44.44h-1.76c-.47 0-.807-.015-1.012-.044-.147 2.053-.572 3.799-1.276 5.236-.704 1.467-1.834 2.816-3.388 4.048-1.526 1.232-3.667 2.523-6.424 3.872L.969 37.336c2.053-1.232 3.49-2.23 4.312-2.992.821-.763 1.32-1.51 1.496-2.244.205-.733.308-1.921.308-3.564v-15.4h8.096v8.36c0 .293.073.528.22.704.176.176.41.264.704.264h1.76Zm14.742-.396c0 1.613-.396 3.11-1.188 4.488a9.228 9.228 0 0 1-3.212 3.256C26.857 30.604 25.362 31 23.72 31h-5.852c-.293 0-.44-.147-.44-.44v-7.656c0-.293.147-.44.44-.44h5.764c.235 0 .44-.088.616-.264a.895.895 0 0 0 .264-.66v-9.636h8.096v10.164Zm.088 12.452v6.82h-13.64v-6.82h13.64ZM44.06 31c-1.643 0-3.14-.396-4.488-1.188a9.228 9.228 0 0 1-3.212-3.256 8.856 8.856 0 0 1-1.188-4.488V.948h8.096V21.54c0 .293.073.528.22.704.176.147.396.22.66.22h2.684c.293 0 .44.147.44.44v7.656c0 .293-.147.44-.44.44H44.06ZM60.556 1.564v6.82h-13.64v-6.82h13.64Zm-8.096 10.34h8.096v10.164c0 1.613-.396 3.11-1.188 4.488a9.228 9.228 0 0 1-3.212 3.256c-1.35.792-2.845 1.188-4.488 1.188h-4.84c-.293 0-.44-.147-.44-.44v-7.656c0-.293.147-.44.44-.44h4.752c.235 0 .44-.088.616-.264a.895.895 0 0 0 .264-.66v-9.636Z"
+                fill="#222F5D"
+              />
+              <path
+                d="M96.153 22.464c.294 0 .44.147.44.44v7.656c0 .293-.146.44-.44.44h-1.232c.06.528.088.924.088 1.188 0 1.76-.44 3.388-1.32 4.884a9.544 9.544 0 0 1-3.563 3.52c-1.497.88-3.14 1.32-4.928 1.32H74.814c-2.171 0-4.18-.543-6.028-1.628a12.168 12.168 0 0 1-4.4-4.4c-1.086-1.848-1.628-3.857-1.628-6.028V18.24h8.095v11.176c0 1.085.382 2.01 1.145 2.772.791.792 1.73 1.188 2.816 1.188H85.33c.352 0 .645-.117.88-.352.234-.235.352-.513.352-.836 0-.323-.118-.601-.352-.836a1.194 1.194 0 0 0-.88-.352h-9.636v-8.536h20.46ZM96.156 31c-.293 0-.44-.147-.44-.44v-7.656c0-.293.147-.44.44-.44h9.856c1.995 0 3.696-.616 5.104-1.848l3.476-3.08-5.06-2.464c-.41-.176-.733-.264-.968-.264-.528 0-1.056.235-1.584.704l-4.576 5.06-5.632-4.928 4.62-5.632c.939-1.115 2.039-1.921 3.3-2.42 1.262-.528 2.523-.792 3.784-.792 1.467 0 2.86.352 4.18 1.056l9.416 4.4c.147.059.264.088.352.088h5.676v7.92h-5.632v1.232c0 .293.074.528.22.704.176.176.411.264.704.264h5.5c.294 0 .44.147.44.44v7.656c0 .293-.146.44-.44.44h-5.5c-1.73 0-3.153-.41-4.268-1.232-1.085-.85-1.98-2.083-2.684-3.696l-.88.88a15.744 15.744 0 0 1-4.972 3.036A16.43 16.43 0 0 1 104.912 31h-8.756Zm5.456 3.52h6.82v6.82h-6.82v-6.82Zm42.026-12.452c0 1.613-.396 3.11-1.188 4.488a9.223 9.223 0 0 1-3.212 3.256c-1.349.792-2.845 1.188-4.488 1.188h-5.852c-.293 0-.44-.147-.44-.44v-7.656c0-.293.147-.44.44-.44h5.764c.235 0 .44-.088.616-.264a.895.895 0 0 0 .264-.66v-9.636h8.096v10.164Zm.088 12.452v6.82h-13.64v-6.82h13.64Zm14.137-12.056c.762 0 1.144-.308 1.144-.924a.71.71 0 0 0-.264-.572c-.176-.176-.587-.484-1.232-.924l-9.9-6.82 4.62-6.688 11.22 7.788c1.202.939 2.112 1.936 2.728 2.992.616 1.056.924 2.376.924 3.96 0 1.848-.455 3.52-1.364 5.016-.88 1.467-2.083 2.625-3.608 3.476-1.526.821-3.183 1.232-4.972 1.232h-10.956v-8.536h11.66Z"
+                fill="#FF755C"
+              />
+            </svg>
+            <hr class="border-orange-600 border-t-4 mr-2 rounded-full w-14" />
+          </div>
+          <p class="text-xl text-slate-800">
+            دیجی تایزر عرضه کننده جدیدترین محصولات الکترونیک نظیر لپ تاپ، گوشی
+            هوشمند و ساعت هوشمند می باشد.<br />دیجی تایزر این افتخار را داشته که
+            به <span class="font-bold text-orange-600">۲۳۲,۱۲۲ نفر</span> تا به
+            اکنون خدمت رسانی داشته باشد.
+          </p>
+        </div>
+        <div class="w-1/4">
+          <h3 class="text-xl font-bold mb-5 text-slate-800">محصولات</h3>
+          <ul class="text-lg">
+            <li class="mb-5">
+              <a class="text-slate-800" href="">تلفن همراه</a>
+            </li>
+            <li class="mb-5"><a class="text-slate-800" href="">لپ تاپ</a></li>
+            <li class="mb-5">
+              <a class="text-slate-800" href="">ساعت هوشمند</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-col w-1/4">
+          <img src="/assets/images/static/map.png" alt="آدرس دیجی تایزر" />
+          <ul class="my-5 ml-3">
+            <li class="flex flex-row-reverse justify-start items-center">
+              <span class="mr-2 mb-2"
+                ><svg
+                  width="28"
+                  height="28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.892 17.441 10.733 19.6a1.172 1.172 0 0 1-1.645.011c-.128-.128-.256-.245-.385-.373a33.148 33.148 0 0 1-3.255-3.815c-.956-1.33-1.726-2.66-2.286-3.978-.549-1.33-.829-2.602-.829-3.815 0-.794.14-1.552.42-2.252A5.37 5.37 0 0 1 4.095 3.43c.747-.735 1.563-1.097 2.427-1.097.326 0 .653.07.945.21.303.14.571.35.781.653l2.707 3.815c.21.292.362.56.467.817.105.245.163.49.163.712 0 .28-.082.56-.245.828a3.965 3.965 0 0 1-.653.828l-.887.922a.624.624 0 0 0-.187.467c0 .093.012.175.035.268.035.093.07.163.094.233.21.385.571.887 1.085 1.494a39.905 39.905 0 0 0 1.691 1.843c.117.117.245.233.362.35.467.455.478 1.202.012 1.668ZM25.632 21.385c0 .326-.059.665-.175.992-.035.093-.07.186-.117.28-.198.42-.455.816-.793 1.19-.572.63-1.202 1.085-1.914 1.376-.011 0-.023.012-.035.012a5.893 5.893 0 0 1-2.24.431c-1.19 0-2.461-.28-3.803-.851-1.342-.572-2.683-1.342-4.013-2.31-.455-.338-.91-.677-1.342-1.038l3.815-3.816c.327.245.618.432.863.56.059.024.129.059.21.094a.806.806 0 0 0 .292.047c.198 0 .35-.07.478-.199l.887-.875c.292-.291.572-.513.84-.653.268-.163.537-.245.828-.245.222 0 .455.047.712.152.257.105.525.256.817.455l3.861 2.741c.304.21.514.455.642.747.117.291.187.583.187.91Z"
+                    fill="#FF755C"
+                  />
+                </svg>
+              </span>
+              <span class="text-slate-800 text-lg">۰۲۱-۱۲۳۴۵۶</span>
+            </li>
+            <li class="flex flex-row-reverse justify-start items-center">
+              <span class="mr-2 mb-2"
+                ><svg
+                  width="28"
+                  height="28"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19.833 4.083H8.167c-3.5 0-5.834 1.75-5.834 5.833v8.167c0 4.083 2.334 5.833 5.834 5.833h11.666c3.5 0 5.834-1.75 5.834-5.833V9.916c0-4.083-2.334-5.833-5.834-5.833Zm.549 7.105-3.652 2.917c-.77.618-1.75.921-2.73.921s-1.972-.303-2.73-.921l-3.652-2.917a.898.898 0 0 1-.14-1.237.872.872 0 0 1 1.225-.14l3.652 2.917c.887.712 2.392.712 3.278 0l3.652-2.917a.861.861 0 0 1 1.225.14.885.885 0 0 1-.128 1.237Z"
+                    fill="#FF755C"
+                  />
+                </svg>
+              </span>
+              <span class="text-slate-800 text-lg">info@digitizer.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
     <script src="//unpkg.com/alpinejs" defer></script>
   </body>
