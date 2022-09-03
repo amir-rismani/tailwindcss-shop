@@ -117,16 +117,21 @@
         <div class="flex flex-col md:flex-row gap-9 md:gap-7">
           <!-- Cart items -->
           <div class="md:w-8/12">
-            <div class="md:bg-white rounded-lg p-5 flex flex-col">
-              <div class="flex gap-x-10 border-b border-gray-200 py-5">
+            <div class="md:bg-white rounded-lg flex flex-col gap-y-2 md:p-4">
+              <div
+                class="flex gap-x-4 lg:gap-x-10 p-4 rounded-lg bg-white md:border-b border-gray-200 py-5 shadow-[0_2px_8px_0px_rgba(0,0,0,0.08)] md:shadow-none md:rounded-none"
+              >
                 <div>
                   <img src="/assets/images/static/apple_6_series.png" alt="" />
                 </div>
                 <div
                   class="flex flex-col flex-grow justify-center items-start gap-6"
                 >
-                  <span class="text-xl">ساعت هوشمند اپل سری ۶</span>
-                  <span class="text-xl font-medium text-orange-600"
+                  <span class="text-base sm:text-lg lg:text-xl"
+                    >ساعت هوشمند اپل سری ۶</span
+                  >
+                  <span
+                    class="text-base sm:text-lg lg:text-xl font-medium text-orange-600"
                     >۲,۲۵۰,۰۰۰ تومان</span
                   >
                 </div>
@@ -147,9 +152,13 @@
                       />
                     </svg>
                   </span>
-                  <div class="flex justify-end items-center gap-1">
+                  <div
+                    class="flex justify-end items-center gap-1"
+                    x-data="{ quantity: 1 }"
+                  >
                     <span
                       class="flex justify-center items-center cursor-pointer w-6 h-6 rounded-full text-slate-800 bg-gray-300"
+                      @click="quantity++"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -168,11 +177,13 @@
                     </span>
                     <input
                       type="text"
-                      value="۱"
-                      class="w-12 border border-orange-600 text-center focus:ring-0 focus:border-orange-600"
+                      x-model="quantity"
+                      class="w-8 px-0 border border-orange-600 text-center focus:ring-0 focus:border-orange-600"
                     />
                     <span
                       class="flex justify-center items-center cursor-pointer w-6 h-6 rounded-full text-orange-600 bg-orange-300"
+                      @click="quantity > 1 ? quantity-- : quantity = 1"
+                      :class="quantity === 1 ? 'pointer-events-none' : ''"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -192,15 +203,20 @@
                   </div>
                 </div>
               </div>
-              <div class="flex gap-x-10 border-b border-gray-200 py-5">
+              <div
+                class="flex gap-x-4 lg:gap-x-10 p-4 rounded-lg bg-white md:border-b border-gray-200 py-5 shadow-[0_2px_8px_0px_rgba(0,0,0,0.08)] md:shadow-none md:rounded-none"
+              >
                 <div>
                   <img src="/assets/images/static/apple_6_series.png" alt="" />
                 </div>
                 <div
                   class="flex flex-col flex-grow justify-center items-start gap-6"
                 >
-                  <span class="text-xl">ساعت هوشمند اپل سری ۶</span>
-                  <span class="text-xl font-medium text-orange-600"
+                  <span class="text-base sm:text-lg lg:text-xl"
+                    >ساعت هوشمند اپل سری ۶</span
+                  >
+                  <span
+                    class="text-base sm:text-lg lg:text-xl font-medium text-orange-600"
                     >۲,۲۵۰,۰۰۰ تومان</span
                   >
                 </div>
@@ -221,9 +237,13 @@
                       />
                     </svg>
                   </span>
-                  <div class="flex justify-end items-center gap-1">
+                  <div
+                    class="flex justify-end items-center gap-1"
+                    x-data="{ quantity: 1 }"
+                  >
                     <span
                       class="flex justify-center items-center cursor-pointer w-6 h-6 rounded-full text-slate-800 bg-gray-300"
+                      @click="quantity++"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -242,11 +262,13 @@
                     </span>
                     <input
                       type="text"
-                      value="۱"
-                      class="w-12 border border-orange-600 text-center focus:ring-0 focus:border-orange-600"
+                      x-model="quantity"
+                      class="w-8 px-0 border border-orange-600 text-center focus:ring-0 focus:border-orange-600"
                     />
                     <span
                       class="flex justify-center items-center cursor-pointer w-6 h-6 rounded-full text-orange-600 bg-orange-300"
+                      @click="quantity > 1 ? quantity-- : quantity = 1"
+                      :class="quantity === 1 ? 'pointer-events-none' : ''"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -266,15 +288,20 @@
                   </div>
                 </div>
               </div>
-              <div class="flex gap-x-10 py-5">
+              <div
+                class="flex gap-x-4 lg:gap-x-10 p-4 rounded-lg bg-white md:border-b border-gray-200 py-5 shadow-[0_2px_8px_0px_rgba(0,0,0,0.08)] md:shadow-none md:rounded-none"
+              >
                 <div>
                   <img src="/assets/images/static/apple_6_series.png" alt="" />
                 </div>
                 <div
                   class="flex flex-col flex-grow justify-center items-start gap-6"
                 >
-                  <span class="text-xl">ساعت هوشمند اپل سری ۶</span>
-                  <span class="text-xl font-medium text-orange-600"
+                  <span class="text-base sm:text-lg lg:text-xl"
+                    >ساعت هوشمند اپل سری ۶</span
+                  >
+                  <span
+                    class="text-base sm:text-lg lg:text-xl font-medium text-orange-600"
                     >۲,۲۵۰,۰۰۰ تومان</span
                   >
                 </div>
@@ -295,9 +322,13 @@
                       />
                     </svg>
                   </span>
-                  <div class="flex justify-end items-center gap-1">
+                  <div
+                    class="flex justify-end items-center gap-1"
+                    x-data="{ quantity: 1 }"
+                  >
                     <span
                       class="flex justify-center items-center cursor-pointer w-6 h-6 rounded-full text-slate-800 bg-gray-300"
+                      @click="quantity++"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -316,11 +347,13 @@
                     </span>
                     <input
                       type="text"
-                      value="۱"
-                      class="w-12 border border-orange-600 text-center focus:ring-0 focus:border-orange-600"
+                      x-model="quantity"
+                      class="w-8 px-0 border border-orange-600 text-center focus:ring-0 focus:border-orange-600"
                     />
                     <span
                       class="flex justify-center items-center cursor-pointer w-6 h-6 rounded-full text-orange-600 bg-orange-300"
+                      @click="quantity > 1 ? quantity-- : quantity = 1"
+                      :class="quantity === 1 ? 'pointer-events-none' : ''"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -343,7 +376,7 @@
             </div>
           </div>
           <!-- Total section -->
-          <div class="md:w-4/12 flex flex-col gap-3">
+          <div class="md:w-4/12 flex-col gap-3 hidden md:flex">
             <div class="bg-white rounded-lg p-8 flex flex-col mb-5">
               <span class="flex justify-between mb-8">
                 <span class="text-slate-900 text-xl font-medium"
@@ -382,6 +415,69 @@
                   >۶,۴۰۰,۰۰۰ تومان</span
                 >
               </span>
+            </div>
+            <button
+              class="cursor-pointer bg-orange-600 py-3 rounded-md text-xl font-bold text-white"
+            >
+              ادامه فرآیند خرید
+            </button>
+            <button
+              class="cursor-pointer border-2 border-orange-600 py-3 rounded-md text-xl font-bold text-orange-600"
+            >
+              انصراف از خرید
+            </button>
+          </div>
+          <div
+            class="md:w-4/12 flex flex-col gap-3 md:hidden"
+            x-data="{have_copon: false}"
+          >
+            <div class="bg-white rounded-lg p-8 flex flex-col mb-5">
+              <span class="flex justify-between mb-8">
+                <span class="text-slate-900 text-xl font-medium"
+                  >مجموع قیمت:</span
+                >
+                <span class="text-orange-700 text-lg font-medium"
+                  >۶,۶۵۰,۰۰۰ تومان</span
+                >
+              </span>
+
+              <span
+                x-show="!have_copon"
+                @click="have_copon=true"
+                class="text-base text-slate-800 text-xl font-medium"
+                >کد تخفیف دارید؟</span
+              >
+              <div x-show="have_copon">
+                <span class="flex justify-between items-center mb-8">
+                  <span class="text-slate-900 text-xl w-1/2">کد تخفیف:</span>
+                  <span class="flex w-1/2 h-8">
+                    <input
+                      type="text"
+                      placeholder="123ABC"
+                      class="w-2/3 rounded-r-md focus:ring-0 text-center"
+                    />
+                    <button
+                      class="bg-orange-600 cursor-pointer rounded-l-md text-white w-1/3"
+                    >
+                      تایید
+                    </button>
+                  </span>
+                </span>
+                <span class="flex justify-between mb-8">
+                  <span class="text-slate-900 text-xl font-medium">تخفیف:</span>
+                  <span class="text-slate-800 text-lg font-medium"
+                    >۲۵۰,۰۰۰ تومان</span
+                  >
+                </span>
+                <span class="flex justify-between mt-8">
+                  <span class="text-slate-900 text-xl font-medium"
+                    >قیمت نهایی</span
+                  >
+                  <span class="text-orange-700 text-lg font-medium"
+                    >۶,۴۰۰,۰۰۰ تومان</span
+                  >
+                </span>
+              </div>
             </div>
             <button
               class="cursor-pointer bg-orange-600 py-3 rounded-md text-xl font-bold text-white"
