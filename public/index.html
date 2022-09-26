@@ -750,12 +750,12 @@
 
     <!-- Small Device Navbar -->
     <nav
-      class="block fixed bottom-0 w-full bg-white py-5 px-12 rounded-t-md shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] md:hidden"
+      class="block fixed bottom-0 w-full bg-white py-5 rounded-t-md shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] md:hidden"
       x-data="{activeTab: 1}"
     >
       <ul class="flex justify-between items-center gap-4">
-        <li @click="activeTab = 1" class="w-full">
-          <a class="flex justify-center items-center" href="#">
+        <li @click="activeTab = 1" class="w-6/12 sm:w-3/12">
+          <a class="flex justify-center items-center" href="/public">
             <span
               :class="activeTab !== 1 ? 'opacity-40' : ''"
               class="text-slate-800"
@@ -773,13 +773,16 @@
                 />
               </svg>
             </span>
-            <span x-show="activeTab === 1" class="mr-2 font-bold text-lg"
+            <span x-show="activeTab === 1" class="mr-2 font-bold text-base"
               >خانه</span
             >
           </a>
         </li>
-        <li @click="activeTab = 2" class="w-full">
-          <a class="flex justify-center items-center" href="#">
+        <li @click="activeTab = 2" class="w-2/12 sm:w-3/12">
+          <a
+            class="flex justify-center items-center"
+            href="/public/category.html"
+          >
             <span
               :class="activeTab !== 2 ? 'opacity-40' : ''"
               class="text-slate-800"
@@ -809,13 +812,13 @@
                 />
               </svg>
             </span>
-            <span x-show="activeTab === 2" class="mr-2 font-bold text-lg"
+            <span x-show="activeTab === 2" class="mr-2 font-bold text-base"
               >دسته بندی</span
             >
           </a>
         </li>
-        <li @click="activeTab = 3" class="w-full">
-          <a class="flex justify-center items-center" href="#">
+        <li @click="activeTab = 3" class="w-2/12 sm:w-3/12">
+          <a class="flex justify-center items-center" href="/public/cart.html">
             <span
               :class="activeTab !== 3 ? 'opacity-40' : ''"
               class="text-slate-800"
@@ -833,12 +836,12 @@
                 />
               </svg>
             </span>
-            <span x-show="activeTab === 3" class="mr-2 font-bold text-lg"
+            <span x-show="activeTab === 3" class="mr-2 font-bold text-base"
               >سبد خرید</span
             >
           </a>
         </li>
-        <li @click="activeTab = 4" class="w-full">
+        <li @click="activeTab = 4" class="w-2/12 sm:w-3/12">
           <a class="flex justify-center items-center" href="#">
             <span
               :class="activeTab !== 4 ? 'opacity-40' : ''"
@@ -857,7 +860,7 @@
                 />
               </svg>
             </span>
-            <span x-show="activeTab === 4" class="mr-2 font-bold text-lg"
+            <span x-show="activeTab === 4" class="mr-2 font-bold text-base"
               >علاقمندی‌ها</span
             >
           </a>
